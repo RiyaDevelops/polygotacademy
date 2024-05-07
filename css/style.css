@@ -1,0 +1,281 @@
+:root{
+/* Color Scheme */
+ --primary-clr: ;
+ --accent-clr: ;
+ --btn-clr: ;
+ --dropdown:#3752b4;
+ --main:#a0d8ef;
+
+ /* Font Family  */
+ --ff: "Outfit", sans-serif;
+/* -- Text font weights -- */
+ --font-weight-Thin: 100;
+--font-weight-ExtraLight: 200;
+--font-weight-Light: 300;
+--font-weight-Regular: 400;
+--font-weight-Medium: 500;
+--font-weight-Semibold: 600;
+--font-weight-Bold: 700;
+--font-weight-ExtraBold: 800;
+--font-weight-Black:900;
+/* font size */
+--heading-font-size:75px;
+--subheading-font-size:32px;
+}
+
+
+body{
+    font-family: var(--ff);
+    cursor:pointer;
+    /* include padding for mobile deisgn */
+    /* padding: 0 1rem; */
+}
+
+header{
+    /* background-color: yellow; */
+    position: sticky;     /* we want it to stick to the top of the page  */
+    z-index:100;         /* float above everything else */
+    height:69px;
+    width:100%;
+    left:0;
+    top:0px; /* Fixed position from the top of the viewport */
+    /* display: flex; */
+    display: flex;
+    padding:0 20px 0 20px;
+    align-items: center;
+    background-color: white;
+
+}
+
+
+.logo{
+  display: inline-block;
+  max-width: 100px;
+  /* background-color: aqua; */
+  height:69px;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    align-items: center;
+  }
+
+/* mobile design */
+.mobile-navbar-menu{
+   width:75px;
+   display: none;
+   background-color: black;
+   margin-left: 10px;
+   /* justify-content: flex-end; */
+   height:69px;
+   border: none;
+   text-align: center;
+}
+
+.mobile-navbar-menu i[class^="fa"]{
+    font-size: 2rem;
+    display: inline-block;
+    /* padding:0.8rem; */
+    transition: 0.3s ease-in-out;
+    color: white;
+    text-align: center;
+}
+
+.navbar{
+    /* background-color: pink; */
+    display:flex;
+    width:100%;
+    height:100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar .logo{
+ /* background-color: aqua; */
+ width:60px;
+ height:69px;
+ align-items: center;
+}
+
+.primary-navigation{
+    /* background-color: aqua; */
+    display:flex;
+    align-items: center;    
+}
+
+.primary-navigation .nav__link{
+    text-decoration: none;
+     text-align: center;
+     /* background-color: red; */
+     margin-right: 80px;
+     font-size: 16px;
+     color:black;
+     font-weight: var(--font-weight-Medium);
+}
+
+.nav__link:nth-child(5):after {
+    content: " | ";
+    margin:0px 20px;
+    color:#d9d9d9;
+     /* opacity: 0.3; */
+  }
+
+  .nav__link:nth-child(5) {
+  margin-right: 0;
+  }
+
+  .navbar--right{
+    display:flex;
+    gap:1rem;
+    align-items: center;
+    /* background-color: red;  */
+  }
+
+  #nav__btn{
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    padding:8px 24px;
+    text-transform: uppercase;
+    font-weight: var(--font-weight-Semibold);
+    font-size: 17px;
+    letter-spacing: 0.1rem;
+    border:1px black solid;
+    cursor: pointer;
+  }
+    #nav__btn:hover{
+    background-color: white;
+    color:black;
+    /* transition: 0.3s ease-out;   */
+  }
+
+  .navbar-icons{
+    display: flex;
+    gap:0.3rem;
+    align-items: center;
+  }
+
+  .navbar-icons #globe {
+    font-size: 1.6rem;
+  }
+  
+  .navbar-icons #dropdown{
+    font-size: 1rem;
+    color:var(--dropdown);
+  }
+
+  /* --------- Media Queries Navbar ------------- */
+  @media screen and (max-width:990px){
+    .header{
+        padding:0 0px 0 20px;
+    }
+    .mobile-navbar-menu{
+        display:block;
+        padding:0.4em;
+    }
+    /* .mobile-navbar-menu .navbar-close{
+        display: none;
+    } */
+    .primary-navigation .nav__link{
+        display: none;
+    }
+    #nav__btn{
+        display:none;
+    }
+ 
+}
+/* =============== Media Queries ======== ======= */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width:100%;
+    padding: 0 1rem;
+    /* background: yellow; */
+    border:1px solid black; 
+}
+
+/* ======== Dropdown  */
+.dropdown__box{
+    border:1px black solid;
+    border-radius:15px;
+    background-color: white;
+    display: flex;
+}
+
+.dropdown-header{
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-Medium);
+}
+/* Style the dropdown button */
+.drop-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    /* max-width: 100%; */
+    text-transform: uppercase;
+    width: 150px;
+    height:auto;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  /* Show the dropdown menu when the button is hovered over */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Style the dropdown links */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+
+
+  .wave-seperator{
+    transform: rotate(180deg);
+  }
+
+  /* ====================== Courses section ===============*/
+  .courses{
+   
+  }
+
+
+  /* -------------- About-us section ====================*/
+  .about-us{
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='1313' viewBox='0 0 800 1313' fill='none' preserveAspectRatio='none'%3E%3Cscript xmlns=''%3Ewindow._wordtune_extension_installed = true;%3C/script%3E%3Cpath d='M1169.09 0.751587L1169.09 1312.29L395.089 1312.29C395.089 1312.29 620 635 498 325C325.498 -113.324 -0.911875 88.2878 -0.911875 88.2878L-2.0553 0.75203L1169.09 0.751587Z' fill='%23fbacd4'/%3E%3C/svg%3E");    background-size: 100%;
+    background-size: 100% 100%; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-repeat: no-repeat;
+    display: flex;
+  }
+
+
+
+  /* Students  */
+  .students{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+  }
