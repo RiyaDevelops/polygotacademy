@@ -1,11 +1,11 @@
 :root{
 /* Color Scheme */
- --primary-clr: ;
- --accent-clr: ;
- --btn-clr: ;
+ --primary-clr: #f7c945;
+ --accent-clr: #4544f7;
+ --black: black;
  --dropdown:#3752b4;
- --main:#a0d8ef;
-
+ --hero-dropdown:blue;
+ /* --main:#a0d8ef; */
  /* Font Family  */
  --ff: "Outfit", sans-serif;
 /* -- Text font weights -- */
@@ -19,16 +19,28 @@
 --font-weight-ExtraBold: 800;
 --font-weight-Black:900;
 /* font size */
---heading-font-size:75px;
+--heading-font-size:3rem;
 --subheading-font-size:32px;
+--body-font-size:18px;
 }
 
+
+html{
+  scroll-behavior: smooth;
+}
+
+.main-heading{
+  font-size: var(--heading-font-size);
+  font-weight: var(--font-weight-Bold);
+}
 
 body{
     font-family: var(--ff);
     cursor:pointer;
     /* include padding for mobile deisgn */
     /* padding: 0 1rem; */
+    font-size: var(--body-font-size);
+    color:var(--black);
 }
 
 header{
@@ -39,7 +51,6 @@ header{
     width:100%;
     left:0;
     top:0px; /* Fixed position from the top of the viewport */
-    /* display: flex; */
     display: flex;
     padding:0 20px 0 20px;
     align-items: center;
@@ -47,7 +58,60 @@ header{
 
 }
 
+.go-to-bottom {
+  background-color: blue;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  align-items: center;
+}
 
+
+.go-to-bottom i[class^="fa"]{
+  font-size: 2.3rem;
+  color:white;
+  align-items: center;
+}
+
+.go-to-bottom:hover{
+  transform:translateY(3px);
+}
+
+.back-to-top{
+  background-color: red;
+  width:60px;
+  height:60px;
+  align-items: center;
+  position:fixed;
+  bottom:2rem;
+  right:2rem;
+  display: inline-flex;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  display: none;
+}
+
+.back-to-top:hover{
+  transform:translateY(-3px);
+}
+
+.back-to-top i[class^="fa"]{
+  color:white;
+  font-size: 2.3rem;
+}
+
+
+/* ==========================LOGO ===================== */
 .logo{
   display: inline-block;
   max-width: 100px;
@@ -193,71 +257,329 @@ header{
     width:100%;
     padding: 0 1rem;
     /* background: yellow; */
-    border:1px solid black; 
+    /* border:1px solid black;  */
 }
 
+  /* .wave-seperator{
+    transform: rotate(180deg);
+  } */
+
+  /* ====================== HERO SECTION -----===============*/
+  .hero{
+    /* background-color: var(--primary-clr); */
+    /* padding-top: 20px; */
+  }
+ 
+  .hero .container{
+    /* background-color: #d9d9d9; */
+    display:grid;
+    grid-template-areas: "text" "images";
+    grid-template-columns: 55% auto;
+    align-items: center;
+    /* padding:50px 0 ; */
+
+  }
+  @media screen and (max-width:767px) {
+    .hero .container{
+      grid-template-areas: 
+    "text"
+    "area";
+   grid-template-columns: 1fr; 
+   }
+
+  }
+
+  .hero__section--left{
+   grid-area: text;
+  }
+
+  .hero__heading{
+    font-size: clamp(30px, 10vw, 70px); /* Adjust the minimum and maximum font sizes as needed */
+    font-weight: var(--font-weight-ExtraBold);
+    line-height: 1.3;
+    letter-spacing: 2px;
+  }
+
+  .hero__paragraph{
+    font-size: clamp(16px, 4vw, 24px); /* Adjust the minimum, preferred, and maximum font sizes as needed */
+    /* background: #4CAF50; */
+    margin-top:3rem;
+    line-height: 1.8;
+    max-width:90%;
+
+  }
+
+  .hero__section--right {
+    grid-area: "image";
+}
+
+.hero-img--main img {
+    width: 100%; /* Set the maximum width of the image to 100% */
+    height: auto; /* Allow the height to adjust automatically to maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn't exceed its container's width */
+}
+
+/*----------- DROPDOWN --------------- */
 /* ======== Dropdown  */
+
+.hero__bottom{
+  /* background-color: #3752b4; */
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+}
 .dropdown__box{
-    border:1px black solid;
-    border-radius:15px;
-    background-color: white;
-    display: flex;
+  border:1px black solid;
+  border-radius:24px;
+  /* background-color: var(--hero-dropdown); */
+  display: flex;
+  box-shadow: #000 10px 10px 0px 0px;
+  align-items:center;
+  line-height:16px;
+  margin:0px 151px;
+  padding:32px 30px;
+  position: relative;
+  top: 0;
+  transform: translateY(-21%);
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  max-width:800px;
+  height:130px;
+  margin:0 auto;  
+  justify-content: space-between;
 }
 
 .dropdown-header{
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-Medium);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-weight: var(--font-weight-Bold);
+  text-transform: uppercase;
 }
 /* Style the dropdown button */
 .drop-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    /* max-width: 100%; */
-    text-transform: uppercase;
-    width: 150px;
-    height:auto;
-  }
-  
-  /* Style the dropdown content (hidden by default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  }
-  
-  /* Show the dropdown menu when the button is hovered over */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Style the dropdown links */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
+  background-color: var(--accent-clr);
+  color: white;
+  justify-content: space-between;
+  display: flex;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  max-width: 100%;
+  text-transform: uppercase;
+  /* width: 150px; */
+  height:auto;
+  border-radius: 20px;
+  border:1px black solid;
+}
 
+#dropdown{
+  margin-left: 10px;
+}
 
-  .wave-seperator{
-    transform: rotate(180deg);
-  }
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  overflow-y: auto; 
+}
 
+/* Show the dropdown menu when the button is hovered over */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: var(--font-weight-Bold);
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.btn {
+  padding: 12px 20px; /* Adjust padding to your preference */
+  border-radius: 8px; /* Adjust border radius for rounded corners */
+  background-color: black; /* Button background color */
+  color: white; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  font-weight: bold; /* Optionally adjust font weight */
+  text-transform: uppercase; /* Optionally transform text to uppercase */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color change */
+  border:2px solid black;
+}
+
+.btn:hover {
+  background-color: white; 
+  color: var(--black);
+}
+
+#dropdown__btn-cta{
+  background-color: red;
+  padding: 12px 20px;
+}
+  
   /* ====================== Courses section ===============*/
   .courses{
-   
+   /* background-color: yellow; */
+   padding: 80px 0;
   }
+
+  .main-heading--two{
+    text-align: center;
+  }
+  .subheading {
+    text-align: center;
+    margin-top:20px;
+    font-size: clamp(18px, 4vw, 24px); /* Adjust the minimum, preferred, and maximum font sizes as needed */
+    font-weight: var(--font-weight-Medium);
+  }
+/* 
+  .courses__info{
+    
+  } */
+
+.course-cards{
+  /* background-color: red; */
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px; /* Adjust the grid gap value as needed */
+  padding:2rem;
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+.course-card{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding:50px;
+  align-items: center;
+  text-align: center;
+  background-color: #4544f7;
+  font-size: 25px;
+  text-transform: uppercase;
+  cursor:pointer;
+  max-width: 100%;
+}
+
+.course-card:hover{
+ transition: 0.3s ease-in-out;
+ background: #f7c945;
+}
+
+@media (max-width: 768px) {
+  .course-cards {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+  }
+}
+/* 
+  <section class="courses" id="courses">
+  <div class="container">
+    <h1 class="main-heading main-heading--two"> 
+      Explore a World of 30+ Languages 
+    </h1>
+    <p class="subheading courses__info">
+      At Polyglot Academy, our courses are crafted with your needs at heart, blending simplicity, 
+      interactivity, and enjoyable learning
+    </p>
+    <div class="course-cards">
+      <div class="course-card">
+        <span> English</span>
+      </div>
+      <!-- course one -->
+
+      <div class="course-card">
+        <span> Spanish </span>
+      </div>
+      <!-- course two -->
+
+      <div class="course-card">
+        <span> Arabic </span>
+      </div>
+      <!-- course three -->
+
+      <div class="course-card">
+        <span> French </span>
+      </div>
+      <!-- course four -->
+
+      <div class="course-card">
+        <span> Mandarin </span>
+      </div>
+      <!-- course five -->
+
+      <div class="course-card">
+        <span> Danish </span>
+      </div>
+      <!-- course six -->
+
+      <div class="course-card">
+        <span> Turkish </span>
+      </div>
+      <!-- course seven -->
+
+      <div class="course-card">
+        <span> Bengali </span>
+      </div>
+      <!-- course eight -->
+
+    </div>
+    <!-- course cards -->
+
+    <div class="courses__section--bottom">
+      <p class="courses-information">
+       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum distinctio quod quo nesciunt iure est molestias maiores quibusdam recusandae. 
+      </p>
+      <a class="btn courses">
+        More Courses
+      <i class="fa-solid fa-caret-right"></i>
+      </a>
+    </div>
+  </div>
+</section> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   /* -------------- About-us section ====================*/
@@ -271,6 +593,7 @@ header{
     display: flex;
   }
 
+  /* -------------- About-us section ====================*/
 
 
   /* Students  */
