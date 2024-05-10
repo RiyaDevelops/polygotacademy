@@ -68,11 +68,12 @@ a:not([class]) {
   color: currentColor;
 }
 
-/* Make images easier to work with */
+/* Make images easier to work with, doesn't go being the container sizeß*/
 img,
 picture {
   max-width: 100%;
   display: block;
+  max-block-size: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */

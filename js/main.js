@@ -1,48 +1,86 @@
-// hamburger variable menu
+// Hamburger Responsive Navbar
 
+// JavaScript event listener
+// document.addEventListener('DOMContentLoaded', function () {
+    // declare variable called hamburger, we are targeting the .fa-bars, 
+    //class name = .menu
+    const hamburger = document.querySelector(".menu");
+    // declare a variable to target the navbar , navbar has a class of navbar
+   // Target the menu icon
 
-
-
-// Back to Top Button 
-function scrollToBottom() {
-    window.scrollTo({  //scrollTo method used in js 
-        bottom: 0,
-        behavior: 'smooth'
-    });
-}
-
-var prevScrollpos = window.pageYOffset;
-
-window.addEventListener('scroll', function() {
-    var currentScrollPos = window.pageYOffset;
-    var goBottomButton = document.querySelector('.go-to-bottom');
-
-    if (prevScrollpos > currentScrollPos) {
-        goBottomButton.style.display = "inline-flex";
-    } else {
-        goBottomButton.style.display = "none";
-    }
-    prevScrollpos = currentScrollPos;
+// Add event listener to the menu icon
+hamburger.addEventListener('click', () => {
+    // Toggle the 'toggle' class on the menu icon
+    hamburger.classList.toggle("toggle");
+    
+    // Log a message to the console to test if the menu icon is being clicked
+    console.log("Menu icon clicked!");
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+// <!-- scroll to bottom floating icon -->
+//         <a href="#courses" class="go-to-bottom" onclick="scrollToBottom()" >
+//           <i class="fa-solid fa-angle-down"></i>
+//           </a>
+//           <!-- scroll to bottom floating icon -->
+
+//           <!-- <div class="back-to-top"> -->
+//         <a href="" class="back-to-top" onclick="scrollToTop()">
+//           <i class="fa-solid fa-angle-up"></i>
+//           </a>
+//         <!-- </div> -->
+
 // Back to Top Button 
-function scrollToTop() {
-    window.scrollTo({  //scrollTo method used in js 
-        top: 0,
-        behavior: 'smooth'
-    });
-}
+// function scrollToBottom() {
+//     window.scrollTo({  //scrollTo method used in js 
+//         bottom: 0,
+//         behavior: 'smooth'
+//     });
+// }
 
-window.addEventListener('scroll', myHeight)
- function myHeight(){
-    var goTopButton= document.querySelector('.back-to-top'); //selecting the class
-    var windowHeight = window.innerHeight; //window.innerHeight represents the height of the viewport (the visible area of the browser window).
-    var documentHeight = document.documentElement.scrollHeight; // Total height of the document
+// var prevScrollpos = window.pageYOffset;
 
-    if(window.scrollY +  windowHeight >= documentHeight){ //When the sum is greater than or equal to the document height, it means the user has scrolled to the bottom of the page.
-        goTopButton.style.display = "inline-flex"
-    } else{
-        goTopButton.style.display = "none"
-    }
- }
+// window.addEventListener('scroll', function() {
+//     var currentScrollPos = window.pageYOffset;
+//     var goBottomButton = document.querySelector('.go-to-bottom');
+
+//     if (prevScrollpos > currentScrollPos) {
+//         goBottomButton.style.display = "inline-flex";
+//     } else {
+//         goBottomButton.style.display = "none";
+//     }
+//     prevScrollpos = currentScrollPos;
+// });
+
+
+// // Back to Top Button 
+// function scrollToTop() {
+//     window.scrollTo({  //scrollTo method used in js 
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// }
+
+// window.addEventListener('scroll', myHeight)
+//  function myHeight(){
+//     var goTopButton= document.querySelector('.back-to-top'); //selecting the class
+//     var windowHeight = window.innerHeight; //window.innerHeight represents the height of the viewport (the visible area of the browser window).
+//     var documentHeight = document.documentElement.scrollHeight; // Total height of the document
+
+//     if(window.scrollY +  windowHeight >= documentHeight){ //When the sum is greater than or equal to the document height, it means the user has scrolled to the bottom of the page.
+//         goTopButton.style.display = "inline-flex"
+//     } else{
+//         goTopButton.style.display = "none"
+//     }
+//  }

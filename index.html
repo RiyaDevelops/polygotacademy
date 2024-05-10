@@ -32,69 +32,65 @@
 </head>
 <body>
 
-  <!-- Header Begins -->
+  <!-- =========== Header Begins ============== -->
     <header class="header">
         <!-- <div class="container"> -->
-    
+   
          <!-- logo -->
-      <a class="logo">
-        <img href= "#" src="images/logo__image-removebg-preview.png" alt="logo picture">
-       <!-- Polyglot Academy -->
+      <a  href="#home" class="logo">
+        Polygot academy
+        <!-- <img href= "#" src="images/logo__image-removebg-preview.png" alt="logo picture"> -->
       </a> 
+      <!-- logo image -->
 
-       <!-- NavBar Begins -->
-      <navbar class="navbar">
-        <div class="primary-navigation">
-          <a href="#home" class="nav__link">Home</a>
-          <a href="#courses" class="nav__link">Courses</a>
-          <a href="#about-us" class="nav__link">About Us</a>
-          <a href="#students" class="nav__link">Students</a>
-          <a href="#questions" class="nav__link">Events</a>
+      
+       <!--======= NavBar Begins============ -->
+      <nav class="navbar">
+          <a href="#home" class="navbar__link">Home</a>
+          <a href="#courses" class="navbar__link">Courses</a>
+          <a href="#about-us" class="navbar__link">About Us</a>
+          <a href="#students" class="navbar__link">Students</a>
+          <a href="#questions" class="navbar__link">Events</a>
 
+          <!-- right section of navbar Begins -->
           <div class="navbar--right">
-          <button class="navbar-cta" id="nav__btn"> 
-            Log In
-          </button>
+            <a href="#" class="navbar__cta">
+              Sign In
+            </a>
+            <!-- cta button -->
+          <a  href="#" class="navbar__btn" id="navbar__btn"> 
+           Sign up
+          </a>
           <div class="navbar-icons">
             <i class="fa-solid fa-globe" id="globe"></i>
             <i class="fa-solid fa-caret-down" id="dropdown"></i>
           </div>
-        <!-- navbar-icons end here -->
       </div>
-        </div>
-        <!-- primary-navigation ends -->
-      </navbar>
-     <!-- NavBar Ends-->
-      <!-- Hamburger menu begins, mobile design -->
- <button class="mobile-navbar-menu" aria-controls="mobile navigation hamburger menu">
-  <i class="fa-solid fa-bars"></i>
- </button>
- <!-- Hamburger menu ends -->
-    </header>
-   <!-- Header Ends-->
+      <!-- navbar right section nds here  -->
+    </nav>
+     <!--============== NavBar Ends================-->
 
+       <!-- Hamburger menu , mobile design -->
+       <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <!-- Hamburger menu ends -->
+   </header>
+  <!--====== Header Ends=======-->
+
+  <!-- Main content area -->
    <main class="main">
       <section class="hero" id="home">
-
-        <!-- scroll to bottom floating icon -->
-        <a href="#courses" class="go-to-bottom" onclick="scrollToBottom()" >
-          <i class="fa-solid fa-angle-down"></i>
-          </a>
-          <!-- scroll to bottom floating icon -->
-
-          <!-- <div class="back-to-top"> -->
-        <a href="" class="back-to-top" onclick="scrollToTop()">
-          <i class="fa-solid fa-angle-up"></i>
-          </a>
-        <!-- </div> -->
-
         <div class="container">
+          <!-- <svg width="1569" height="1228" viewBox="0 0 1569 1228" fill="none" xmlns="http://www.w3.org/2000/svg" class="jss64"><path d="M49.3359 93.0213C176.666 49.1138 501.009 -31.6279 215.308 272.161C-200.93 714.751 294.339 435.497 478.747 414.421C648.877 394.977 370.733 783.252 328.583 970.299C277.957 1194.95 784.335 638.356 1089.93 598.839C1387.17 560.401 918.685 1041.43 1519.34 1178.42" stroke="#4544f7" stroke-width="30.0524" stroke-linecap="round"></path></svg> -->
+
           <div class="hero__section--left">
+            
             <h1 class="hero__heading">
               #1 Language Learning Platform
             </h1>
             <p class="hero__paragraph">
-              Ready to become a polyglot? Join Polygot Academy to 
+              Ready to become a polyglot ? Join Polygot Academy and 
               Become fluent in multiple languages with courses tailored just for you.           
                </p>
               <h3 class="social-proof">
@@ -128,9 +124,9 @@
                 <a href="#">Spanish</a>
               </div>
             </div>
-            <button class="btn" id="dropdown__btn-cta">
+            <a  href ="#home" class="btn" id="dropdown__btn-cta">
               Join Now
-            </button>
+            </a>
           </div>
           <!-- dropdown box ends here-->
 
@@ -455,7 +451,7 @@
 
     </main>
     <!-- main ends here -->
-
+   
 
 
      <footer class="footer">

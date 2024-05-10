@@ -2,9 +2,8 @@
 # E-Learning language platform Landing Page 
 # Responsive web development
 
-
 # Resources 
-# reset: https://piccalil.li/blog/a-more-modern-css-reset/
+# css reset: https://piccalil.li/blog/a-more-modern-css-reset/
 
 # svg to url path 
 # https://yoksel.github.io/url-encoder/
@@ -15,6 +14,8 @@
 # Illustrations 
 # https://undraw.co/illustrations
 
+# CSS GENERATOR 
+# https://cssgrid-generator.netlify.app/
 
 
 # Fixes to be done 
@@ -25,3 +26,7 @@
 # get responsive images 
 # fix padding and margin 
 # Photoshop logo image on photopea
+
+
+
+
