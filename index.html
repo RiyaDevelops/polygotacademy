@@ -19,6 +19,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+
     <!-- Link Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -26,7 +28,11 @@
    <link rel="stylesheet" 
     href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
    <!-- favicon -->
-    <link rel="icon" href="images/ Logo__PA.png" type="image/x-icon">
+    <!-- <link rel="icon" href="images/ Logo__PA.png" type="image/x-icon"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io//favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <!-- Javascript -->
     <script src="js/main.js"></script>
 </head>
@@ -39,7 +45,7 @@
          <!-- logo -->
       <a  href="#home" class="logo">
         Polygot academy
-        <!-- <img href= "#" src="images/logo__image-removebg-preview.png" alt="logo picture"> -->
+        <!-- <img href= "#" src="images/favicon_io/favicon-32x32.png" alt="logo picture"> -->
       </a> 
       <!-- logo image -->
 
@@ -50,7 +56,7 @@
           <a href="#courses" class="navbar__link">Courses</a>
           <a href="#about-us" class="navbar__link">About Us</a>
           <a href="#students" class="navbar__link">Students</a>
-          <a href="#questions" class="navbar__link">Events</a>
+          <a href="#events" class="navbar__link">Events</a>
 
           <!-- right section of navbar Begins -->
           <div class="navbar--right">
@@ -67,6 +73,9 @@
           </div>
       </div>
       <!-- navbar right section nds here  -->
+      <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </nav>
      <!--============== NavBar Ends================-->
 
@@ -81,18 +90,27 @@
   <!-- Main content area -->
    <main class="main">
       <section class="hero" id="home">
-        <div class="container">
-          <!-- <svg width="1569" height="1228" viewBox="0 0 1569 1228" fill="none" xmlns="http://www.w3.org/2000/svg" class="jss64"><path d="M49.3359 93.0213C176.666 49.1138 501.009 -31.6279 215.308 272.161C-200.93 714.751 294.339 435.497 478.747 414.421C648.877 394.977 370.733 783.252 328.583 970.299C277.957 1194.95 784.335 638.356 1089.93 598.839C1387.17 560.401 918.685 1041.43 1519.34 1178.42" stroke="#4544f7" stroke-width="30.0524" stroke-linecap="round"></path></svg> -->
+        <!-- <svg  viewBox="0 0 1569 1228" fill="none" xmlns="http://www.w3.org/2000/svg" class="decoration"><path d="M49.3359 93.0213C176.666 49.1138 501.009 -31.6279 215.308 272.161C-200.93 714.751 294.339 435.497 478.747 414.421C648.877 394.977 370.733 783.252 328.583 970.299C277.957 1194.95 784.335 638.356 1089.93 598.839C1387.17 560.401 918.685 1041.43 1519.34 1178.42" stroke="#4544f7" stroke-width="30.0524" stroke-linecap="round"></path></svg> -->
 
+        <svg width="1569" height="1228" viewBox="0 0 1569 1228" fill="none" xmlns="http://www.w3.org/2000/svg" class="j">
+          <path d="M49.3359 93.0213C176.666 49.1138 501.009 -31.6279 215.308 272.161C-200.93 714.751 294.339 435.497 478.747 414.421C648.877 394.977 370.733 783.252 328.583 970.299C277.957 1194.95 784.335 638.356 1089.93 598.839C1387.17 560.401 918.685 1041.43 1519.34 1178.42" 
+          stroke="orange" 
+          stroke-width="80.0524" 
+          stroke-linecap="round"
+           data-metatip="true"
+            data-selected="true" 
+            data-label-id="0"></path>
+          </svg>
+
+        <div class="container">
           <div class="hero__section--left">
-            
             <h1 class="hero__heading">
-              #1 Language Learning Platform
+              # 1 Language Learning Platform
             </h1>
             <p class="hero__paragraph">
-              Ready to become a polyglot ? Join Polygot Academy and 
-              Become fluent in multiple languages with courses tailored just for you.           
-               </p>
+              Join Polyglot Academy and unlock the world of languages with tailored courses for your fluency journey. 
+              Become fluent in multiple languages with us !         <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, fugiat? -->
+            </p>
               <h3 class="social-proof">
                 <i class="fa-solid fa-medal"></i>
                 " Ranked #1 e-leanring platform by Business Insider "
@@ -101,27 +119,62 @@
           </div>
           <!-- hero-text ends here -->
           <div class="hero__section--right">
-            <img src="images/day13-it-girl-removebg-preview.png" alt="hero image" class="hero-img--main">
+            <!-- <img src="images/Speaking-Multiple-Languages-AdobeStock_187621422-removebg-preview.png" alt=""> -->
           </div>
           <!-- hero-img end here -->
-         
         </div>
         <!-- container ends here -->
+     
         <div class="hero__bottom">
+          <!-- <img src="images/svgviewer-png-output (4).png" alt="hero image" class="hero-img--main"> -->
+
           <div class="dropdown__box">
             <h3 class="dropdown-header">
               Choose A Language :
             </h3>
+            <!-- dropwdown scroll button -->
             <div class="dropdown">
               <button class="drop-btn"> ENGLISH
                 <i class="fa-solid fa-caret-down" id="dropdown"></i>
               </button>
               <div class="dropdown-content">
+                <a href="#">Afrikaans</a>
+                <a href="#">Albanian</a>
                 <a href="#">Arabic</a>
+                <a href="#">Armenian</a>
+                <a href="#">Azerbaijani</a>
+                <a href="#">Basque</a>
+                <a href="#">Belarusian</a>
+                <a href="#">Bengali</a>
+                <a href="#">Bosnian</a>
+                <a href="#">Bulgarian</a>
+                <a href="#">Burmese</a>
+                <a href="#">Catalan</a>
+                <a href="#">Cebuano</a>
+                <a href="#">Chichewa</a>
+                <a href="#">Chinese (Simplified)</a>
+                <a href="#">Chinese (Traditional)</a>
+                <a href="#">Corsican</a>
+                <a href="#">Croatian</a>
+                <a href="#">Czech</a>
+                <a href="#">Danish</a>
+                <a href="#">Dutch</a>
+                <a href="#">English</a>
+                <a href="#">Esperanto</a>
+                <a href="#">Estonian</a>
+                <a href="#">Filipino</a>
+                <a href="#">Finnish</a>
                 <a href="#">French</a>
-                <a href="#">Spanish</a>
-                <a href="#">Spanish</a>
-                <a href="#">Spanish</a>
+                <a href="#">Frisian</a>
+                <a href="#">Galician</a>
+                <a href="#">Georgian</a>
+                <a href="#">German</a>
+                <a href="#">Greek</a>
+                <a href="#">Gujarati</a>
+                <a href="#">Haitian Creole</a>
+                <a href="#">Hausa</a>
+                <a href="#">Hindi</a>
+
               </div>
             </div>
             <a  href ="#home" class="btn" id="dropdown__btn-cta">
@@ -129,14 +182,11 @@
             </a>
           </div>
           <!-- dropdown box ends here-->
-
         </div>
         <!-- bottom area -->
       </section>
       <!-- hero section ends here -->
-   
-      <!-- <img src="images/wave.svg" alt="wave svg" class="wave-seperator">  -->
-     
+      <!-- <img src="images/wave (2).svg" alt="wave svg" class="wave-seperator">  -->
      
      
       <section class="courses" id="courses">
@@ -196,7 +246,8 @@
             <p class="courses-information">
               Our courses use interactive games to teach new languages in a fun and engaging way. 
               It's a fresh approach that makes learning languages easy and fun !            </p>
-            <a class="btn" id="courses__btn">
+          <!-- button courses -->
+              <a  href="#courses"  class="btn" id="courses__btn">
               More Courses
             <i class="fa-solid fa-caret-right"></i>
             </a>
@@ -215,14 +266,15 @@
         
               <h1 class="main-heading main-heading--three">
            Why Polyglot Academy ?    
-          </h1>    
-
-          <!-- <p class="about-us-text">
-            Your Passport to Multilingual Mastery. Learn languages effortlessly with interactive courses and expert instructors.
-          </p> -->
-          <!-- <a href="#" class="btn about-us__cta"> Join Now </a> -->
-</div>
-<!-- heading section ends here -->
+          </h1>   
+          <!-- button -->
+           <!-- <a href="#" class="btn about-us__cta"> Join Now </a>  -->
+ 
+          <p class="subheading about-us-text">
+            Our mission is to make language learning easy through fun and interactive courses and expert guidance.         
+           </p> 
+        </div>
+        <!-- heading section ends here -->
           <div class="about-us__box-wrapper">
             <!-- about-us list begins here -->
               <div class="about-us__box">
@@ -277,7 +329,8 @@
                     Supportive Community
                 </h3>
                 <p class="about-us__description">
-                  Embark on a Journey to Fluency with Our Experienced Instructors and Supportive Learning Community!                </p>
+                  Embark on a Journey to Fluency with Our Experienced Instructors and Supportive Learning Community!               
+                 </p>
                 <!-- box two ends here -->
                 </div>
                 <!-- about-us info boc ends here -->
@@ -382,13 +435,13 @@
       <section class="events" id="events">
         <div class="container">
           <div class="events--left">
-          <h1 class="main-heading events-heading">
-            Events & Workshops !
+          <h1 class="main-heading">
+            Events and Workshops !
           </h1>
-          <p class="events__description">
-            Discover the thrill of our community events, parties, and surprise pop-up workshops, all designed to spark joy and enhance communication skills for language learners everywhere.        
-            </p>
-              <a class="btn">
+          <p class="subheading  events__description">
+            Join our events and experience the excitement of our community gatherings, parties, surprise pop-ups, and workshops tailored for language learners worldwide.
+           </p>
+              <a class="btn" id="events__btn">
                  Learn More
                 <i class="fa-solid fa-caret-right" id="dropdown"></i>
               </a>
@@ -397,12 +450,21 @@
         <!-- <a class="btn events-btn"> Learn More</a> -->
 
         <div class="events--right">
-        <img src="images/undraw_Showing_support_re_5f2v-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy"> 
-        <img src="images/undraw_Showing_support_re_5f2v-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">       
-        <img src="images/undraw_Showing_support_re_5f2v-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">       
-        <img src="images/undraw_Showing_support_re_5f2v-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">       
+          <div class="img-border">
+        <img src="images/download2-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy"> 
+         </div>
+         <div class="img-border">
+        <img src="images/2981d999d160ecf0080ca904cd7a197f-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">    
+         </div>   
+         <div class="img-border">
+        <img src="images/young-adults-talking-with-each-other-different-languages_23-2148365246-removebg-preview-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">     
+        </div>
+        <div class="img-border">  
+        <img src="images/friends-youth-happy-people-cartoon-group-outdoor-scene-urban-city-park-hanging-out-vector-illustration-graphic-design-155299825-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">      
+        </div> 
 
        </div>
+       <!-- events right end here -->
         </div>
         <!-- container ends here -->
       </section>
@@ -410,45 +472,50 @@
 
      <section class="questions" id="questions">
       <div class="container">
-        <h1 class="main-heading questions-heading">
-          Frequently Asked Questions
-        </h1>
-        <div class="questions-box">
-        <p class="questions__title">
-          Is Polygot Academy free ?
-        </p>
-        <i class="fa-solid fa-caret-down" id="dropdown"></i>
-      </div>
-      <!-- questions box ends here -->
-      <div class="questions-box">
-        <p class="questions__title">
-          What is the most enrolled course?
-        </p>
-        <i class="fa-solid fa-caret-down" id="dropdown"></i>
+        <h1 class="main-heading questions-heading" > Frequently asked Questions</h1>
 
+        <button class="accordion"> Is Polygot Academy free ?</button>
+        <div class="panel">
+          <p> Polygot Academy is free for the first month. We charge a monthly subscription fee for only 20.99 a month. </p>
         </div>
-        <!-- second box -->
-        <div class="questions-box">
-        <p class="questions__title">
-          Can I teach on Polygot Academy?
-        </p>
-        <i class="fa-solid fa-caret-down" id="dropdown"></i>
 
+        <button class="accordion"> What is the most enrolled course?
+        </button>
+        <div class="panel">
+          <p> Polygot Academy's most enrolled course is Spanish, French and Hindi ! </p>
         </div>
-        <!-- third box -->
 
-        <div class="questions-box">
-          <p class="questions__title">
-             Our the events worldwide?
-          </p>
-          <i class="fa-solid fa-caret-down" id="dropdown"></i>
+        <button class="accordion">Can I teach on Polygot Academy?
+        </button>
+        <div class="panel">
+          <p> Yes, YOU CAN !!. You must go throught s full background check and teaching verification beforehand. </p>
+        </div>
+        <button class="accordion"> Are the Events wordlwide ?
+        </button>
+        <div class="panel">
+          <p> Yes,  we like to host events all over the globe !! </p>
+        </div>
 
-          </div>
-          <!-- fourth box -->
+     
       </div>
       <!-- container ends here -->
      </section>
-
+     <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
     </main>
     <!-- main ends here -->
    
@@ -465,7 +532,7 @@
                   Become a Polygot !
               </a>
               <p class="socials-cta" >
-               Follow  <span> @PolygotAcademy</span> on all platforms:
+               Follow  <span> @PolygotAcademy</span> 
               </p>
               <!-- social media links -->
               <div class="footer-icons">

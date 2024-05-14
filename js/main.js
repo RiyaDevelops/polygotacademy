@@ -4,28 +4,60 @@
 // document.addEventListener('DOMContentLoaded', function () {
     // declare variable called hamburger, we are targeting the .fa-bars, 
     //class name = .menu
-    const hamburger = document.querySelector(".menu");
+    // const hamburger = document.querySelector(".menu");
     // declare a variable to target the navbar , navbar has a class of navbar
    // Target the menu icon
 
-// Add event listener to the menu icon
-hamburger.addEventListener('click', () => {
-    // Toggle the 'toggle' class on the menu icon
-    hamburger.classList.toggle("toggle");
+// // Add event listener to the menu icon
+// hamburger.addEventListener('click', () => {
+//     // Toggle the 'toggle' class on the menu icon
+//     hamburger.classList.toggle("toggle");
     
-    // Log a message to the console to test if the menu icon is being clicked
-    console.log("Menu icon clicked!");
-});
+//     // Log a message to the console to test if the menu icon is being clicked
+//     console.log("Menu icon clicked!");
+// });
 
 
 
+// const hamburger = document.querySelector(".menu");
+// const navbar = document.querySelector(".navbar");
+
+// // Add event listener to the menu icon
+// hamburger.addEventListener('click', () => {
+//     console.log("Menu icon clicked!"); // Check if the event listener is triggered
+
+//     hamburger.classList.toggle("toggle");
+    
+//     // Toggle the 'navbar-open' class on the navbar
+//     navbar.classList.toggle("navbar-open");
+// });
 
 
+// const dropdown = document.querySelector('.dropdown');
+//     dropdown.forEach(dropdown => {
+        
+//         const button = dropdown.querySelector('.drop-btn');
+//         const caret = dropdown.querySelector('.fa-caret-down');
+//     });
 
 
+// console.log("JavaScript file loaded successfully!");
 
 
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 
 
 

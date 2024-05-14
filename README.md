@@ -17,7 +17,8 @@
 # CSS GENERATOR 
 # https://cssgrid-generator.netlify.app/
 
-
+# Responsive NAVBAR 
+# https://dev.to/david_bilsonn/learn-how-to-build-responsive-navigation-bar-with-html-css-javascript-4g5
 # Fixes to be done 
 # fix hero section bottom area 
 # reduce line and bring names close to tetsimonaila paragrah 
