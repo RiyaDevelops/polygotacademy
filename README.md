@@ -1,6 +1,7 @@
 # PolygotAcademy
-# E-Learning language platform Landing Page 
-# Responsive web development
+# E-Learning platform Landing Page Designed and Developed by Shariya / @RiyaDevelops 
+# HTML5, CSS, JS
+# Responsive Web Development
 
 # Resources 
 # css reset: https://piccalil.li/blog/a-more-modern-css-reset/
@@ -19,10 +20,23 @@
 
 # Responsive NAVBAR 
 # https://dev.to/david_bilsonn/learn-how-to-build-responsive-navigation-bar-with-html-css-javascript-4g5
+
+# Blob maker 
+# https://9elements.github.io/fancy-border-radius/#9.85.93.7--. 
+ 
+# Images
+# https://squoosh.app/
+
+# svg to png converter
+# https://www.svgviewer.dev/svg-to-png 
+
+# Responsive Navbar
+# https://dev.to/devggauravlet-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci
+
 # Fixes to be done 
 # fix hero section bottom area 
-# reduce line and bring names close to tetsimonaila paragrah 
-# fix color scheme
+# reduce line and bring names close to tetsimonaila paragrah --done
+# fix color scheme --done 
 # fix padding of buttons 
 # get responsive images 
 # fix padding and margin 
