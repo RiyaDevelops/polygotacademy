@@ -1,9 +1,33 @@
-
-
+// Javascript 
+// # Test
 // console.log("testing testing!");
 
+//Scroll Reveal
+ScrollReveal().reveal('.course-card',{ delay: 200 }); 
+ScrollReveal().reveal('.student-feedback',{ delay: 500 }); 
 
 
+
+
+
+// -------------------MOBILE NAVBAR SECTION----------------------------
+
+function toggleMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+  hamburgerMenu.classList.toggle("active");
+
+  // Toggle class to show/hide menu
+  mobileMenu.classList.toggle("nav--open");
+}
+
+
+// -------------------MOBILE NAVBAR SECTION----------------------------
+
+
+
+// -------------------FAQS SECTION----------------------------
 // FREQUENTLY ASKED QUESTIONS - ACCORDIAN 
       
 var acc = document.getElementsByClassName("accordion");
@@ -22,27 +46,8 @@ var acc = document.getElementsByClassName("accordion");
       }
 
 
-// JavaScript for Navbar 
-//targeting these two classes 
-//  function toggleMenu(){
-//   const hamburgerMenu = document.querySelector(".navbar");
-//   const hamburgerIcon = document.querySelector(".hamburger-menu")
 
-//   //target hamburgerMenu and hamburgerIcon.
-//   hamburgerMenu.classList.toggle("nav--open");
-//   hamburgerIcon.classList.toggle("nav--open");
-
-//  }
-function toggleMenu() {
-  const mobileMenu = document.getElementById("mobile-menu");
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
-
-  hamburgerMenu.classList.toggle("active");
-
-  // Toggle class to show/hide menu
-  mobileMenu.classList.toggle("nav--open");
-}
-
+// -------------------FAQS SECTION----------------------------
 
 
 
