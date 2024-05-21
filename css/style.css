@@ -54,6 +54,7 @@ body{
     font-size: var(--body-font-size);
     color:var(--black);
     scroll-behavior: smooth;
+    /* background-color: yellowgreen; */
 
 }
 
@@ -73,24 +74,7 @@ header{
 }
 
 /*  BUTTON  STYLING  */
-  /* .btn {
-    color:white;
-    background-color: black;
-    border-radius: 10px;
-    padding:17px 24px;
-    text-transform: uppercase;
-    font-weight: var(--font-weight-Semibold);
-    font-size: 17px;
-    letter-spacing: 0.1rem;
-    border:1px black solid;
-    cursor: pointer;
-    transform: var(--transition);
-    text-decoration: none;
-    text-align: center;
-    flex-shrink: 1;
-
-  } */
-
+ 
   .btn{
     border: 2px var(--black) solid;
     border-radius: 8px;
@@ -161,6 +145,7 @@ header{
 .navbar__link:hover {
   color: var(--dropdown);
   font-weight: var(--font-weight-Medium);
+  /* border-bottom: 1px solid black; */
 }
 
 .navbar__link:nth-child(5):after {
@@ -226,104 +211,177 @@ header{
     color:var(--dropdown);
   }
 
-  /* mobile hamburger design */
-.menu{
-  width:70px;
-  display: none;
-  background-color: var(--black);
-  height:69px;
-  border: none;
-  text-align: center;
-  align-items: center;
-  cursor: pointer;
-}
+  /* --------------- > MOBILE HAMBURGER DESIGN <-------------------- */
 
-.menu i[class^="fa"]{
-   font-size: 2.5rem;
-   display: inline-block;
-   padding:0.8rem;
-   transition: 0.3s ease-in-out;
-   color: white;
-   text-align: center;
-}
-
-/* menu styling ends  */
-
-  /* --------- Media Queries Navbar ------------- */
-  @media screen and (max-width:1109px){
-    .header{
-        padding:0 0px 0 20px;
-    }
-      
-  .menu{
-      display:block;
+  .hamburger-menu{
+    font-size: 1.7rem;
+    padding:10px;
+    display: none;
+    /* background-color: black; */
+    transition: all 0.3s ease-in-out;
+    color:white;
+    background-color: black;
   }
-  .navbar__btn,
-  .navbar-icons{
+  
+/* menu styling */
+/* Mobile menu */
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 60%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  /* transform: translateX(100%); */
+  right: 0;
+  top:69px;
+  align-items:left;
+  justify-content: space-around;
+  /* height: calc(100vh - 69px); */
+  font-size: 1rem;
+  align-items: center;
+  gap:1.4rem;
+  padding: 0 0 15px 0;
+
+}
+
+/* created an active class for hmaburger menu 
+we are targeting the bars icon , we will replace
+the bars icon with the x mark (times) */
+
+.hamburger-menu.active i::before{
+  content: "\f00d"; /* Times icon */
+  transition: all 0.4s ease-in-out;
+  /* overflow: none; */
+}
+
+@media  screen and (max-width:322px) {
+  .mobile-menu{
+    width:80%;
+    right:0;
+  }
+  
+}
+
+.mobile-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: var(--black);
+  text-align: left;
+  border-bottom: 1px solid transparent;
+  text-align: center;
+  /* transition: all 0.5s ease; */
+  transition: border-bottom 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  /* background-color: #f4f4f4; */
+  color: var(--accent-clr);
+  transition: all 0.5s  ease-in-out;
+  border-bottom: 1px solid var(--black); /* Change to desired color */
+}
+
+
+.mobile-menu .navbar__btn{
+  width:30%;
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 1109px) {
+  /* Hide desktop navigation */
+  .navbar, .navbar--right {
     display: none;
   }
-  .navbar{
+
+  /* Show hamburger menu */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Display mobile menu when nav--open class is added */
+  .mobile-menu.nav--open {
+    display: flex;
+    transition: all 0.4s ease-in-out;
+    pointer-events: auto;
+
+    /* background-color: red; */
+  }
+}
+  /* --------- Media Queries Navbar ------------- */
+  /* @media screen and (max-width:1109px){
+    .header{
+       padding:0 0px 0 20px;
+    }
+  
+    .navbar, 
+    .navbar--right{
+      display: none;
+    }
+
+    .hamburger-menu{
+      display: block;
+    }
+
+  } */
+
+  /* ----------============================== NAVBAR MENU ----------- */
+  /* .navbar{
     border:2px solid black;
     position:absolute;
-    /* starts where our header ends 69px */
+    /* starts where our header ends 69px 
     top:70px;
-    /* right corner */
     right:0;
     width:70%;
-    /* 100vh - the height of our header */
+    /* 100vh - the height of our header 
     height: calc(100vh - 69px);
-    /* height: 100vh; */
     background-color: #f7c945;
-    /* orientation change  */
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light box shadow */
-    transform: translateX(-0%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transform: translateX(-100%);
     opacity:0;
+    justify-content: flex-start;
+    z-index: 1000;
     pointer-events: none;
-    transition: all 0.3s ease-in-out;
-   }
+    visibility: hidden; 
+   } */
 
    /* target this class to target in js */
-   .navbar-open .navbar{
+   /* .navbar-open .navbar{
     opacity: 1;
     transform: translateX(100);
     pointer-events: auto;
     visibility: visible;
-   }
+    transition: all 0.4s ease-in-out;
 
-   .navbar__link{
+   } */
+/* ========================================= JS CLASS =-===================== */
+   /* .navbar__link{
     font-size: clamp(18px, 5vw, 20px);   
     display: block;
-    /* border: 1px solid red; */
-    width:30%;
-    margin: 2rem 0 0;
+    width:100%;
+    margin: 1rem 0;
     padding: 10px;
     text-align: center;
     transition: var(--transition);
     color: var(--black);
-    border-bottom: 5px var(--black) solid;
-  }
-
-  .navbar__link:hover{
-   color: var(--clr-white);
-  }
+    border-bottom: 1px solid var(--black); 
+  } */
 
 
-   
-   .navbar__link:nth-child(5):after {
-    content: "  ";
-    margin: 0;
+  
 
-  }
-
-  /* .logo{
+/* .logo{
     move logo ot the middle of navbar
     margin-right: auto;
 
   } */
-}
+
 /* =============== Media Queries ======== ======= */
 
 /* CONTAINER */
@@ -774,9 +832,9 @@ header{
       line-height: 2.5;
     }
 
-   #courses__btn {
+   /* #courses__btn {
       width:100%;
-    }
+    } */
 }
 /* ================== -------- >>>>>>> Media Queries COURSES SECTION <<<<<<--------- ===============*/
 
@@ -923,6 +981,7 @@ header{
 
 .stats-section{
   background-color: var(--accent-clr);
+  /* opacity: 0.8; */
   padding: 90px 0;
   margin: 90px 0;
 }
@@ -1071,7 +1130,7 @@ header{
   .student-feedback-desc{
     width:100%;
     max-width: 80%;
-    line-height: 2.0;
+    line-height: 2.5;
     font-weight: var(--font-weight-Bold);
     font-size: 25px;
     /* background-color: #f7c945; */
@@ -1097,6 +1156,9 @@ header{
     margin-top: 50px;
   }
 
+
+  
+
   /*================= events section=============== */
 
   .events{
@@ -1116,11 +1178,9 @@ header{
   .events--left{
     display: flex;
     flex-direction: column;
-    /* flex-basis: 50%; */
     max-width: 50%;
-    /* background-color: #3752b4; */
-    /* padding: 80px; */
-    justify-content: center;
+    /* padding: 0 5px; */
+    /* justify-content: center; */
     text-align: left;
   }
 
@@ -1131,7 +1191,7 @@ header{
     margin: 30px 0;
     line-height: 2.5;
     font-weight: var(--font-weight-Regular);
-    max-width: 100%;
+    max-width: 80%;
     font-size: clamp(16px, 2vw, 20px);
     /* background-color: #f7c945; */
     text-align: left;
@@ -1139,11 +1199,12 @@ header{
 
   .events .btn{
   /* display: inline-block; */
-  width:40%;
+  width:35%;
   /* background-color: red; */
   align-items: center;
   text-align: center;
   margin-top: 30px;
+  justify-content: center;
 
   }
 
@@ -1151,8 +1212,15 @@ header{
  @media  screen and (max-width:400px) {
   .events .btn{
     background-color: #4544f7;
+
   }
+
+  .events--left{
+    background-color: #f7c945;
+  }
+
  }
+
 
 .events--right{
    flex-basis: 50%;
@@ -1170,28 +1238,19 @@ header{
    max-width: 100%;
    border-radius: 9px;
    /* flex-shrink: 1; */
-   
-
+  
 }
 
 .events--right img:last-child{
  height:169px;
  width:250px;
 }
- /* background-color: red;
-} */
-/* .img-border{
-  background-color: #4544f7;
-  padding:20px;
 
-}
-.img-border:nth-child(2){
-  background-color:#f4c108;
-  padding:20px;
 
-} */
+
 
 @media screen and (max-width:1087px){
+
 
   .events--left{
   padding-left: 10px;  }
@@ -1199,23 +1258,58 @@ header{
 }
 
 
-  @media screen and (max-width:796px){
+
+
+@media screen and (max-width:1061px){
+   .events--left{
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    /* padding: 0 5px; */
+    /* justify-content: center; */
+    text-align: left;
+  }
+
+}
+
+
+
+
+
+@media screen and (max-width:987px){
+    .events--left{
+      /* background-color: red; */
+      max-width: 50%;
+    }
+    .events .btn {
+      width:40%;
+      /* background-color: red; */
+    }
+
+
+  }
+
+
+  @media screen and (max-width:916px){
     .events .container{
       display: flex;
       flex-direction: column;
-      /* text-align: center; */
+      text-align: center;
       /* width:100%; */
+      align-items: center;
+      justify-content: center;
   
     }
     .events--left{
       /* background-color: red; */
       max-width: 100%;
       text-align: center;
+      align-items: center;
 
     }
 
     .events--right{
-      background-color: #4544f7;
+      /* background-color: #4544f7; */
       justify-content: center;
       align-items: center;
       /* gap:40px 50px; */
@@ -1229,11 +1323,24 @@ header{
   }
 
 
+  @media screen and (max-width:731px){
+    
+    .events--left{
+      /* background-color: red; */
+      /* max-width: 100%; */
+      text-align: center;
+      align-items: center;
+
+    }
+  }
+
+
+
 
   @media screen and (max-width:533px){
     .events .btn{
       display: inline-block;
-      width:90%;
+      /* width:90%; */
     margin:10px;
 
   
@@ -1245,9 +1352,8 @@ header{
         max-width: 100%;
         /* background-color: #3752b4; */
         /* padding: 80px; */
-        text-align: center;
       }
-
+      
       .events__description{
         text-align: center;
       }
@@ -1274,7 +1380,7 @@ header{
   border: none;
   text-align: center;
   outline: none;
-  font-size: clamp(25px, 3vw, 35px);
+  font-size: clamp(25px, 3vw, 32px);
   transition: 0.4s;
   background-color: white;
   line-height: 1.6;
@@ -1286,7 +1392,7 @@ header{
 }
 
 .active, .accordion:hover {
-  background-color: var(--primary-clr);
+  /* background-color: var(--primary-clr); */
   /* opacity: 0.3; */
 }
 
@@ -1472,7 +1578,7 @@ header{
 .footer .btn {
   color:var(--clr-white);
   text-transform: uppercase;
-  /* max-width: 80%; */
+  /* max-width: 40%; */
   text-align: center;
 }
 .footer .btn:hover {

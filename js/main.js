@@ -1,67 +1,82 @@
 
 
-// console.log("JavaScript file loaded successfully!");
-
-// Hamburger Responsive Navbar
-
-// JavaScript event listener
-// document.addEventListener('DOMContentLoaded', function () {
-    // declare variable called hamburger, we are targeting the .fa-bars, 
-    //class name = .menu
-    // const hamburger = document.querySelector(".menu");
-    // declare a variable to target the navbar , navbar has a class of navbar
-   // Target the menu icon
-
-// // Add event listener to the menu icon
-// hamburger.addEventListener('click', () => {
-//     // Toggle the 'toggle' class on the menu icon
-//     hamburger.classList.toggle("toggle");
-    
-//     // Log a message to the console to test if the menu icon is being clicked
-//     console.log("Menu icon clicked!");
-// });
-
-
-
-// const hamburger = document.querySelector(".menu");
-// const navbar = document.querySelector(".navbar");
-
-// // Add event listener to the menu icon
-// hamburger.addEventListener('click', () => {
-//     console.log("Menu icon clicked!"); // Check if the event listener is triggered
-
-//     hamburger.classList.toggle("toggle");
-    
-//     // Toggle the 'navbar-open' class on the navbar
-//     navbar.classList.toggle("navbar-open");
-// });
-
-
-// const dropdown = document.querySelector('.dropdown');
-//     dropdown.forEach(dropdown => {
-        
-//         const button = dropdown.querySelector('.drop-btn');
-//         const caret = dropdown.querySelector('.fa-caret-down');
-//     });
+// console.log("testing testing!");
 
 
 
 // FREQUENTLY ASKED QUESTIONS - ACCORDIAN 
+      
+var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
 
-// var acc = document.getElementsByClassName("accordion");
-// var i;
 
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     var panel = this.nextElementSibling;
-//     if (panel.style.maxHeight) {
-//       panel.style.maxHeight = null;
-//     } else {
-//       panel.style.maxHeight = panel.scrollHeight + "px";
-//     } 
+// JavaScript for Navbar 
+//targeting these two classes 
+//  function toggleMenu(){
+//   const hamburgerMenu = document.querySelector(".navbar");
+//   const hamburgerIcon = document.querySelector(".hamburger-menu")
+
+//   //target hamburgerMenu and hamburgerIcon.
+//   hamburgerMenu.classList.toggle("nav--open");
+//   hamburgerIcon.classList.toggle("nav--open");
+
+//  }
+function toggleMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+  hamburgerMenu.classList.toggle("active");
+
+  // Toggle class to show/hide menu
+  mobileMenu.classList.toggle("nav--open");
+}
+
+
+
+
+//       // JavaScript code creates an event listener for the click event on the hamburger menu icon and toggles the "navbar-open" class on the mobile menu
+// document.addEventListener('DOMContentLoaded', function () {
+//   const hamburger = document.querySelector(".menu");
+//   const mobileMenu = document.querySelector(".mobile");
+//   const hamburgerIcon = document.querySelector(".menu i");
+//   const navLinks = document.querySelectorAll(".navbar__link");
+
+//   // Toggle mobile menu and hamburger icon
+//   hamburger.addEventListener('click', () => {
+//       mobileMenu.classList.toggle("navbar-open");
+
+//       // Toggle the hamburger icon between bars and x
+//       if (mobileMenu.classList.contains("navbar-open")) {
+//           hamburgerIcon.classList.remove("fa-bars");
+//           hamburgerIcon.classList.add("fa-times");
+//       } else {
+//           hamburgerIcon.classList.remove("fa-times");
+//           hamburgerIcon.classList.add("fa-bars");
+//       }
 //   });
-// }
+
+//   // Close mobile menu when a navigation link is clicked ninside mobile menu
+//   navLinks.forEach(link => {
+//       link.addEventListener("click", () => {
+//           mobileMenu.classList.remove("navbar-open");
+//           hamburgerIcon.classList.remove("fa-times");
+//           hamburgerIcon.classList.add("fa-bars");
+//           window.scrollTo({ top: offsetTop, behavior: "smooth" }); // Smooth scroll behavior
+//       });
+//   });
+// });
 
 
 
