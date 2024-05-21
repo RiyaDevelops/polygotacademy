@@ -310,7 +310,22 @@ the bars icon with the x mark (times) */
 
     /* background-color: red; */
   }
+
+  @media screen and (max-width:500px) {
+    .mobile-menu .navbar__btn{
+      width:50%;
+      text-align: center;
+    }
+    
+  }
 }
+@media screen and (max-width:320px) {
+  .mobile-menu {
+    gap:0rem;
+  }
+  
+}
+
   /* --------- Media Queries Navbar ------------- */
   /* @media screen and (max-width:1109px){
     .header{
@@ -413,6 +428,7 @@ the bars icon with the x mark (times) */
     background-position:  top right; 
     background-size: 40% 40%;
     transition: all 0.15s ease 0s; */
+   
   }
 
     .j{
@@ -454,9 +470,26 @@ the bars icon with the x mark (times) */
     "text"
     "area";
    grid-template-columns: 1fr; 
+  
    }
   
   }
+
+  @media screen and (max-width:500px){
+
+    .hero__paragraph{
+   
+   background-color: #4544f7;
+   /* padding:40px;
+       */
+    width:90%;
+  
+  }
+  .social-proof{
+    max-width: 100%;
+   }
+  
+}
  /* -------- MEDIA QUERIE ------- */
 
 
@@ -484,7 +517,7 @@ the bars icon with the x mark (times) */
   }
 
   .hero__paragraph{
-    font-size: clamp(16px, 4vw, 22px); /* Adjust the minimum, preferred, and maximum font sizes as needed */
+    font-size: clamp(16px, 2vw, 22px); /* Adjust the minimum, preferred, and maximum font sizes as needed */
     /* background: #4CAF50; */
     margin-top:20px;
     line-height: 2.2;
@@ -492,13 +525,15 @@ the bars icon with the x mark (times) */
     text-transform:capitalize;
     font-weight: var(--font-weight-Regular);
     /* font-family: "poppins"; */
+    letter-spacing: 1.1px;
+    text-wrap: wrap;
 
   }
  .social-proof{
   margin: 30px 0 0 0;
   font-weight: var(--font-weight-Semibold);
   /* font-style: italic; */
-  font-size: 19px;
+  font-size: clamp(16px, 2vw, 19px);
   text-transform: capitalize;
   line-height: 2.0;
   letter-spacing: 1.2px;
@@ -523,15 +558,14 @@ the bars icon with the x mark (times) */
 
 }
 .hero-img--main {
-  /* width:300px;
-  height:400px; */
   /* margin-top: 10px; */
   /* position: absolute; */
-  max-width:300px;
-  /* height:100px; */
-  /* top:056px; */
-  /* right:90px */
-  background-color: aliceblue;
+  /* max-width:300px; */
+  height:400px;
+  top:56px; 
+  right:90px;
+width: 400px;
+/* background-color: aliceblue;  */
 }
 
 .hero__section--right img {
@@ -550,9 +584,6 @@ the bars icon with the x mark (times) */
   padding-top:100px;
   justify-content: center;
   align-items: center;
-  /* margin-top: 100px; */
-  
-  
 }
 
 .dropdown__box{
@@ -616,11 +647,6 @@ the bars icon with the x mark (times) */
 
 
 
-
-
-.dropdown{
- 
-}
 .dropdown-header{
   font-size: clamp(1rem, 1.3rem, 2rem);
   line-height: 1.6;
@@ -818,7 +844,7 @@ the bars icon with the x mark (times) */
   opacity:0.9;
   border-radius: 10px;
   padding:20px;
-  font-weight: var(--font-weight-Light);
+  font-weight: var(--font-weight-Regular);
 
 }
 
@@ -1196,12 +1222,13 @@ the bars icon with the x mark (times) */
   .events .main-heading{
     line-height: 1.5;
   }
+
   .events__description{
     margin: 30px 0;
     line-height: 2.5;
     font-weight: var(--font-weight-Regular);
     max-width: 80%;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(19px, 2vw, 21px);
     /* background-color: #f7c945; */
     text-align: left;
   }
@@ -1317,6 +1344,11 @@ the bars icon with the x mark (times) */
 
     }
 
+  .events__description{
+      width: 70%;
+      text-align: center;
+    }
+
     .events--right{
       /* background-color: #4544f7; */
       justify-content: center;
@@ -1325,31 +1357,29 @@ the bars icon with the x mark (times) */
       place-content: center; 
       
     }
-    #events__btn {
-      width:100%;
+    .events .btn {
+      width:26%;
       /* background-color: red; */
     }
   }
 
 
-  @media screen and (max-width:731px){
-    
-    .events--left{
-      /* background-color: red; */
-      /* max-width: 100%; */
-      text-align: center;
-      align-items: center;
+ 
 
+  @media screen and (max-width:712px){
+    .events .btn{
+      display: inline-block;
+      width:35%;
+    margin:10px;
+
+  
+      }
     }
-  }
-
-
-
 
   @media screen and (max-width:533px){
     .events .btn{
       display: inline-block;
-      /* width:90%; */
+      width:50%;
     margin:10px;
 
   
@@ -1392,17 +1422,18 @@ the bars icon with the x mark (times) */
   font-size: clamp(25px, 3vw, 32px);
   transition: 0.4s;
   background-color: white;
-  line-height: 1.6;
+  line-height: 1.8;
   display: flex;
   gap:0.4rem;
   text-align: center; 
   justify-content: center;
-
+  font-weight: var(--font-weight-Regular);
+  text-transform: capitalize;
 }
 
 .active, .accordion:hover {
-  /* background-color: var(--primary-clr); */
-  /* opacity: 0.3; */
+  background-color: var(--primary-clr);
+  opacity: 0.8;
 }
 
 .accordion:after {
@@ -1431,6 +1462,7 @@ the bars icon with the x mark (times) */
   text-wrap: wrap;
   text-align: center;
   align-items: center;
+
   }
 
 
@@ -1471,7 +1503,7 @@ the bars icon with the x mark (times) */
   grid-template-columns: 2fr repeat(4, 1fr); /* First and last columns take 2fr each, remaining columns take 1fr each */
   /* padding:60px 0; */
   justify-content: center;
-  font-size: clamp(0.6rem, 1.2rem, 1.4rem);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   line-height: 2.5; 
  /* background-color: red; */
  padding-top: 40px;
@@ -1483,17 +1515,15 @@ the bars icon with the x mark (times) */
   display: flex;
   flex-direction: column;
   line-height: 2.5; 
-  /* font-size: clamp(0.5rem, 0.9rem , 1rem); */
-
 }
 .footer__motto{
   text-transform: uppercase;
-  font-size: clamp(18px, 3vw, 20px);
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: var(--font-weight-ExtraBold);
   text-decoration: none;
 
 }
-
+ 
 .col-1 .footer-icons{
   /* width: 50%; */
   display: flex;
@@ -1511,7 +1541,7 @@ the bars icon with the x mark (times) */
 }
 
 .socials__bg{
-  background-color: var(--accent-clr);
+  background-color: #3752b4;
   border-radius: 20%;
   /* padding: 0px 15px; */
 }
@@ -1539,13 +1569,13 @@ the bars icon with the x mark (times) */
   text-decoration: none;
   list-style-type: none;
   /* gap:4rem; */
-  
 }
 
 .footer-nav a{
   text-decoration: none;
   color: black;
   line-height: 2.5; 
+  font-size: clamp(0.9rem, 2vw, 1rem);
   text-transform: capitalize;
 }
 
@@ -1596,7 +1626,7 @@ the bars icon with the x mark (times) */
 
 .col-5{
   /* align-items: center; */
-  background-color: #3752b4;
+  /* background-color: #3752b4; */
   /* justify-content: center; */
   /* text-align: center; */
   margin-left: 20px;
@@ -1604,11 +1634,53 @@ the bars icon with the x mark (times) */
   flex-direction: column;
 }
 
-
+/* 
 .footer-google-cta{
  width: 200px;
- /* background-color: #d9d9d9; */
  margin-right:30px;
+} */
+
+.subscribe-form{
+  display: flex;
+  background-color: #3752b4;
+  padding:30px 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  max-width: 100%;
+}
+.subscribe-form::placeholder{
+  font-size: 0.3rem;
+}
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  /* width: 300px; */
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+
+.subscribe-form input[type="email"]::placeholder {
+  color: black;
+  font-size:1.1rem;
+}
+.subscribe-form button{
+  border-radius: 2px;
+  padding:10px;
+  background-color: orange;
+  border:1px solid black;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  /* margin-left: 2px; */
+}
+.subscribe-form button:hover{
+  background-color: var(--primary-clr);
+}
+
+.subscribe-message{
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-align: center;
+  align-items: center;
 }
 
 @media screen and (max-width:997px) {

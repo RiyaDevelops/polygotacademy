@@ -4,7 +4,7 @@
 
 //Scroll Reveal
 ScrollReveal().reveal('.course-card',{ delay: 200 }); 
-ScrollReveal().reveal('.student-feedback',{ delay: 500 }); 
+ScrollReveal().reveal('.student-feedback',{ delay: 300 }); 
 
 
 
