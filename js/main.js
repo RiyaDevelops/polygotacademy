@@ -120,7 +120,7 @@ var acc = document.getElementsByClassName("accordion");
 // });
 
 
-// // Back to Top Button 
+// Back to Top Button 
 // function scrollToTop() {
 //     window.scrollTo({  //scrollTo method used in js 
 //         top: 0,
