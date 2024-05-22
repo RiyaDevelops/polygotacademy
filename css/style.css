@@ -1496,6 +1496,7 @@ width: 400px;
 .footer{
   /* background-color: #4544f7; */
   text-decoration: none;
+  padding:50px;
 
 }
 .footer-content{
@@ -1505,16 +1506,16 @@ width: 400px;
   justify-content: center;
   font-size: clamp(1.2rem, 3vw, 1.4rem);
   line-height: 2.5; 
- /* background-color: red; */
- padding-top: 40px;
- text-decoration: none;
- gap: 20px 40px;
+  /* background-color: red; */
+  padding-top: 40px;
+  text-decoration: none;
+  gap: 20px 40px;
 
 }
 .col-1{
   display: flex;
   flex-direction: column;
-  line-height: 2.5; 
+  /* line-height: 2.5;  */
 }
 .footer__motto{
   text-transform: uppercase;
@@ -1646,7 +1647,7 @@ width: 400px;
   padding:30px 20px;
   margin-top: 20px;
   border-radius: 10px;
-  max-width: 100%;
+  min-width: 400px;
 }
 .subscribe-form::placeholder{
   font-size: 0.3rem;
@@ -1676,17 +1677,32 @@ width: 400px;
   background-color: var(--primary-clr);
 }
 
-.subscribe-message{
-  font-size: 0.7rem;
-  line-height: 1.5;
+.subscribe-wrapper{
   text-align: center;
   align-items: center;
+  background-color: #f7c945;
+  padding:10px;
+}
+.subscribe-message{
+  font-size: clamp(0.5rem, 2vw, 0.9rem);
+  line-height: 2.0;
+  /* text-align: center;
+  align-items: center; */
+  /* text-wrap: wrap; */
+  margin-top: 5px;
+
 }
 
+@media screen and (max-width:971px) {
+  .subscribe-form{
+    /* flex-direction: column; */
+    width: 100%;
+  }
+}
 @media screen and (max-width:997px) {
   .footer-content{
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Two columns, evenly spaced */
-   
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two columns, evenly spaced */
+   /* background-color: #f7c945; */
 
   }
 }
@@ -1700,13 +1716,15 @@ width: 400px;
 
   }
   .col-1{
-    order: 5;
+    order: 3;
     min-width: 100%;
-    /* border:2px red solid; */
-    /* align-items: center; */
+   
     margin-top: 1.5rem;
     white-space: nowrap;
     text-align: left;
+  }
+  .col-5{
+    order: 4;
   }
 }
 
@@ -1717,6 +1735,14 @@ width: 400px;
    /* background-color: red; */
 
   }
+  .subscribe-form{
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  /* .subscribe-form input[type="email"]::placeholder {
+    color: black;
+    font-size:0.6rem;
+  } */
 
 }
 
