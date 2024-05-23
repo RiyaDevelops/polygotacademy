@@ -6,19 +6,22 @@
 ScrollReveal().reveal('.course-card',{ delay: 200 }); 
 ScrollReveal().reveal('.student-feedback',{ delay: 300 }); 
 
-
-
-
-
 // -------------------MOBILE NAVBAR SECTION----------------------------
 
+// The toggleMenu function is going to add or remove the 
+// nav--open class from the mobile-menu (from non-visible to visible)
 function toggleMenu() {
+  // The element with the ID mobile-menu will be  assigned to the variable  mobileMenu
   const mobileMenu = document.getElementById("mobile-menu");
+
+  // The element with the class .hamburger-menu assigned teh varibale hamburgerMenu
   const hamburgerMenu = document.querySelector(".hamburger-menu");
 
+  //this will toggle the active class on the hamburger menu
+  // If the class is not present, it adds it; if it is present, it removes it.
   hamburgerMenu.classList.toggle("active");
 
-  // Toggle class to show/hide menu
+  // This will toggle the nav--open class on the mobile menu
   mobileMenu.classList.toggle("nav--open");
 }
 
