@@ -34,12 +34,8 @@
 # https://dev.to/devggauravlet-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci
 
 # Fixes to be done 
-# fix hero section bottom area 
-# reduce line and bring names close to tetsimonaila paragrah --done
-# fix color scheme --done 
-# fix padding of buttons 
-# get responsive images 
-# fix padding and margin 
+#  FIX HERO SECTION IMAGE. HOW DO I MAKE SURE THE IMAGE SHRINKS AS THE SIZE OF TH SCREEN SHRINKS 
+#  FIX SUBSCRIBE NEWS LETTER IN FOOTER - NOT ADAPTIG TO SCREEN SIZE
 # Photoshop logo image on photopea
 
 
