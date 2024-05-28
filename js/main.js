@@ -3,8 +3,8 @@
 // console.log("testing testing!");
 
 //Scroll Reveal
-ScrollReveal().reveal('.course-card',{ delay: 200 }); 
-ScrollReveal().reveal('.student-feedback',{ delay: 300 }); 
+// ScrollReveal().reveal('.course-card',{ delay: 200 }); 
+// ScrollReveal().reveal('.student-feedback',{ delay: 300 }); 
 
 // -------------------MOBILE NAVBAR SECTION----------------------------
 

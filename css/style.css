@@ -55,7 +55,7 @@ body{
     color:var(--black);
     scroll-behavior: smooth;
     /* background-color: yellowgreen; */
-
+    /* background-color: #FFFFF0; */
 }
 
 /* Header STYLING */
@@ -72,6 +72,7 @@ header{
     /* background-color:var(--primary-clr); */
     justify-content: space-between;
     background-color: white;
+    /* border-bottom: 0.5px solid grey; */
 }
 
 /*  BUTTON  STYLING  */
@@ -131,13 +132,12 @@ header{
    /* background-color: pink; */
    display: flex;
    align-items: center;
-   font-size: 18px;
 }
 
  .navbar__link{
    text-decoration: none;
    margin-right: 80px;
-   font-size: 16px;
+   font-size: 18px;
    color: var(--black);
    transition:  all 0.4 ease-in-out;
    font-weight: var(--font-weight-Medium);
@@ -234,16 +234,16 @@ header{
   display: none;
   flex-direction: column;
   position: absolute;
-  width: 50%;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  transform: translateX(-5%);
+  /* transform: translateY(25%); */
   right: 0;
   top:69px;
   align-items:left;
   justify-content: space-around;
-  /* height: calc(100vh - 69px); */
+  height: calc(100vh - 69px);
   font-size: 1rem;
   align-items: center;
   gap:1.4rem;
@@ -285,7 +285,7 @@ the bars icon with the x mark (times) */
   text-align: center;
   /* transition: all 0.5s ease; */
   transition: border-bottom 0.3s ease;
-  font-size: clamp(16px, 2vw, 28px);
+  font-size: clamp(16px, 2vw, 30px);
 }
 
 .mobile-menu a:hover {
@@ -363,18 +363,19 @@ the bars icon with the x mark (times) */
 
   /* ====================== HERO SECTION -----===============*/
   .hero{
-    /* background-color: var(--primary-clr); */
+    
     /* padding-top: 40px; */
     /* height: 100vh; */
     /* border: 2px black solid; */
-    /* background-image: url("../images/imageedit_92_4427789160.png");  */
+    /* background-image: url("../images/svgviewer-png-output\ \(4\).png"); 
     background-position: bottom top; 
     background-repeat: no-repeat;
-    background-position:  top right; 
-    background-size: 40% 40%;
-    transition: all 0.15s ease 0s;
+    background-position:  0% 100% ;
+    background-size: 40% 30%;
+    transition: all 0.15s ease 0s; */
     /* background-color: var(--accent-clr); */
     /* color:#f7c945 */
+
   }
 
     /* .j{
@@ -828,7 +829,7 @@ the bars icon with the x mark (times) */
   opacity:0.9;
   border-radius: 10px;
   padding:20px;
-  font-weight: var(--font-weight-Regular);
+  font-weight: var(--font-weight-Medium);
 
 }
 
@@ -1127,8 +1128,7 @@ the bars icon with the x mark (times) */
     /* flex-direction: column; */
     /* background-color: yellow; */
     /* padding: 90px 0; */
-    margin:90px 0;
-  
+    margin:90px 0;  
   }
 
   .students .container{
