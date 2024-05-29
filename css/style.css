@@ -1538,7 +1538,7 @@ the bars icon with the x mark (times) */
   gap: 20px 40px;
 
 }
-.col-1{
+#col-1{
   display: flex;
   flex-direction: column;
   line-height: 2.5; 
@@ -1561,7 +1561,7 @@ the bars icon with the x mark (times) */
   font-size: clamp(10px, 3vw, 12px);
 } 
  
-.col-1 .footer-icons{
+#col-1 .footer-icons{
   /* width: 50%; */
   width: 80%;
   display: flex;
@@ -1606,12 +1606,12 @@ the bars icon with the x mark (times) */
   transition: 0.3s ease-in-out;
 }
 
-.col-1 .footer__motto,
+/* .col-1 .footer__motto,
 .col-1 .socials-cta,
 .col-1 .footer-icons,
 .col-1 .footer__img {
-  text-align: left; /* Align text and icons to the left */
-}
+  text-align: left; 
+} */
 
 /* ============== footer-nav ============ */
 .footer-nav {
@@ -1689,15 +1689,6 @@ the bars icon with the x mark (times) */
   color:var(--black);
 } */
 
-.col-5{
-  /* align-items: center; */
-  /* background-color: #3752b4; */
-  /* justify-content: center; */
-  /* text-align: center; */
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-}
 
 /* 
 .footer-google-cta{
@@ -1732,11 +1723,12 @@ the bars icon with the x mark (times) */
 }
 
 
-
-@media screen and (max-width:990px){
+/* @media screen and (max-width:990px){
   .socials-cta{
    }
-}
+} */
+
+/* FOOTER FORM */
 .subscribe-form{
   display: flex;
   background-color: #3752b4;
@@ -1797,13 +1789,11 @@ the bars icon with the x mark (times) */
 }
 
 @media screen and (max-width:971px) {
-  .subscribe-form{
-    flex-direction: column;
-    padding:40px;
-    /* order: 4; */
-  }
+  
+  
 
 }
+
 @media screen and (max-width:1025px) {
   .footer-content{
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* Two columns, evenly spaced */
@@ -1822,10 +1812,9 @@ the bars icon with the x mark (times) */
    /* padding: 70px; */
 
   }
-  .col-1{
+  #col-1{
     /* order: 4; */
     min-width: 100%;
-   
     margin-top: 1.5rem;
     white-space: nowrap;
     text-align: left;
