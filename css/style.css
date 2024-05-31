@@ -1527,12 +1527,7 @@ the bars icon with the x mark (times) */
 .footer-content{
   display: grid;
   grid-template-columns: 2fr repeat(3, 1fr) 2fr; /* First and last columns take 2fr each, remaining columns take 1fr each */
-  /* padding:60px 0; */
-  /* justify-content: center; */
   font-size: clamp(0.6rem, 1rem, 1.6rem);
-  /* line-height: 2.5;  */
-  /* background-color: red; */
-  /* border:2px solid green; */
   padding: 10px  20px;
   text-decoration: none;
   gap: 20px 40px;
@@ -1541,36 +1536,41 @@ the bars icon with the x mark (times) */
 #col-1{
   display: flex;
   flex-direction: column;
-  line-height: 2.5; 
 }
 .footer__motto{
   text-transform: uppercase;
-  /* font-size: clamp(14px, 2vw, 18px);
-  font-weight: var(--font-weight-ExtraBold);
-  text-decoration: none; */
-  /* text-wrap: wrap; */
   font-size: clamp(14px, 3vw, 18px); 
 }
 
 .footer-headline{
-  margin:10px 0;
+  margin:7px 0;
   text-transform: capitalize;
   font-weight: var(--font-weight-Bold);
-  text-wrap: wrap;
+  text-wrap: balance;
+  line-height: 1.8;
   color:var(--accent-clr);
-  font-size: clamp(10px, 3vw, 12px);
+  font-size: clamp(10px, 3vw, 14px);
 } 
  
 #col-1 .footer-icons{
-  /* width: 50%; */
   width: 80%;
   display: flex;
-  font-size: clamp(1rem, 2vw, 1.5rem);
   transition: var(--transition);
   gap:1rem;
   padding-bottom:1rem;
 }
- 
+
+.footer-icons i[class^="fa"]{
+  font-size: clamp(0.6rem, 2vw, 1rem);
+}
+
+ @media  screen and (max-width:469px) {
+  .footer-icons i[class^="fa"]{
+    transition: 0.3s ease-in-out;
+    color: black;
+  }
+  
+ }
 .footer-icons i[class^="fa"]{
   transition: 0.3s ease-in-out;
   color: black;
@@ -1606,12 +1606,6 @@ the bars icon with the x mark (times) */
   transition: 0.3s ease-in-out;
 }
 
-/* .col-1 .footer__motto,
-.col-1 .socials-cta,
-.col-1 .footer-icons,
-.col-1 .footer__img {
-  text-align: left; 
-} */
 
 /* ============== footer-nav ============ */
 .footer-nav {
@@ -1661,15 +1655,14 @@ the bars icon with the x mark (times) */
   height: 20px;
 } */
 
-.footer-subscribe {
+.newsletter-title {
   display: flex;
-  text-wrap: wrap;
-  /* border:8px solid green; */
+  text-wrap: balance;
   padding:5px;
-  /* text-align: left; */
-  /* font-size: clamp(10px, 3vw 14px); */
-  /* align-items: flex-start; */
   align-items: center;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-ExtraBold);
+
 }
 
 .footer-subscribe  h4{
@@ -1679,6 +1672,7 @@ the bars icon with the x mark (times) */
 .footer-subscribe .logo {
   margin-left: 0px; /* Optional: add some space between the text and the image */
 }
+
 /* .footer .btn {
   color:var(--clr-white);
   text-transform: uppercase;
@@ -1696,11 +1690,6 @@ the bars icon with the x mark (times) */
  margin-right:30px;
 } */
 
-.newsletter-title{
-  text-transform: capitalize;
-  font-weight: var(--font-weight-ExtraBold);
-  font-size: clamp(12px, 2vw, 18px);
-}
 
 .copyright {
   display: flex;
@@ -1723,28 +1712,22 @@ the bars icon with the x mark (times) */
 }
 
 
-/* @media screen and (max-width:990px){
-  .socials-cta{
-   }
-} */
-
-/* FOOTER FORM */
+/* --------------------------- FOOTER FORM ------------------- */
 .subscribe-form{
   display: flex;
   background-color: #3752b4;
-  padding:30px 20px;
-  margin-top: 20px;
+  padding:25px 20px;
+  margin-top: 10px;
   border-radius: 10px;
-  /* min-width: 350px; */
+  min-width:200px;
   align-items: center;
+
 }
 
-.subscribe-form::placeholder{
+/* .subscribe-form::placeholder{
   font-size: 0.3rem;
-}
+} */
 .subscribe-form input[type="email"] {
-  /* padding: 10px; */
-  /* width: 300px; */
   border: none;
   border-radius: 2px;
   outline: none;
@@ -1780,27 +1763,28 @@ the bars icon with the x mark (times) */
   font-size: 0.5rem;
   line-height: 2.0;
    text-align: center;
-  max-width:200px;
+  min-width:200px;
+  max-width: 300%;
   text-wrap: wrap;
   margin-top: 5px;
   text-transform: capitalize;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
 }
-
-@media screen and (max-width:971px) {
-  
-  
-
-}
-
-@media screen and (max-width:1025px) {
+@media screen and (max-width:1074px) {
   .footer-content{
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* Two columns, evenly spaced */
    /* background-color: #f7c945; */
-
+   
   }
+  .subscribe-form{
+    min-width:360px;
+  }
+
 }
+
+
+
 @media screen and (max-width:860px) {
   .footer-content{
     display: grid;
@@ -1809,38 +1793,28 @@ the bars icon with the x mark (times) */
    align-items: center;
    justify-content: center;
    gap:1.8rem;
-   /* padding: 70px; */
+   /* border: 1px green solid; */
 
   }
-  #col-1{
-    /* order: 4; */
-    min-width: 100%;
-    margin-top: 1.5rem;
-    white-space: nowrap;
-    text-align: left;
-  }
-
 }
  
-/* @media screen and (max-width:669px) {
+@media screen and (max-width:500px) {
   .subscribe-form{
+    min-width:200px;
     flex-direction: column;
-    align-items: center;
-    width: 300px;
-    gap:2rem; 
-    padding: 15px;
+    padding: 20px 0px;
   }
-  .subscribe-form input[type="email"] {
-   width:100%;
-   align-items: center;
-   text-align: center;
-  
-  }
-  
+
   .subscribe-form button{
-   width: 100%;
+   font-size: 0.8rem;
+   width:100%;
   }
-} */
+  .subscribe-form input[type="email"]::placeholder {
+    font-size:0.8rem;
+    /* padding:5px; */
+
+  }
+}
 
 @media screen  and (max-width:550px){
   .footer{
