@@ -90,8 +90,8 @@
   <a href="#about-us" onclick="toggleMenu()">About Us</a>
   <a href="#students" onclick="toggleMenu()">Students</a>
   <a href="#events" onclick="toggleMenu()">Events</a>
-  <a href="#" class="navbar__cta">Sign In</a>
-  <a href="#" class="navbar__btn" id="navbar__btn">Sign Up</a>
+  <a href="#" onclick="toggleMenu()" class="navbar__cta">Sign In</a>
+  <a href="#" onclick="toggleMenu()" class="navbar__btn" id="navbar__btn">Sign Up</a>
 </div>
 <!-- Mobile menu links -->
 
@@ -214,7 +214,7 @@
           </h1>
           <p class="subheading courses__info">
             At Polyglot Academy, our courses are crafted with your needs at heart, blending simplicity, 
-            interactivity, and enjoyable learning
+            interactivity, and enjoyable learning !
           </p>
           <div class="course-cards__wrapper">
             <div class="course-card">
@@ -263,7 +263,7 @@
           <div class="courses__section--bottom">
             <p class="courses-information">
               Our courses use interactive games to teach new languages in a fun and engaging way. 
-              It's a fresh approach that makes learning languages easy and fun !            </p>
+              The approach that makes learning languages easy and fun !            </p>
           <!-- button courses -->
               <a  href="#courses"  class="btn" id="courses__btn">
               More Courses
@@ -283,8 +283,7 @@
             <div class="heading-section">
         
               <h1 class="main-heading main-heading--three">
-           Why Polyglot Academy ?   
-            <!-- <img src="images/LOGO_GLOBE_IMG_-removebg-preview.png" class="about-us__img--one" alt="">  -->
+                Why Choose Polyglot Academy?            <!-- <img src="images/LOGO_GLOBE_IMG_-removebg-preview.png" class="about-us__img--one" alt="">  -->
           </h1>   
           <!-- button -->
            <!-- <a href="#" class="btn about-us__cta"> Join Now </a>  -->
@@ -436,23 +435,31 @@
           </p>
           <div class="student-feedback">
             <p class="student-feedback-desc">
-             " Polyglot Academy made learning Spanish a breeze! 
+              <i class="fa-solid fa-quote-left"></i>
+             Polyglot Academy made learning Spanish a breeze! 
              The interactive lessons and engaging activities kept me motivated throughout the course. 
-              I never thought I could become conversational in such a short time."
+              I never thought I could become conversational in such a short time.
+              <i class="fa-solid fa-quote-right"></i>
+
             </p>
             <span class="student-name"> -Sarah M. , Polygot Academy student since 2024</span>
 
             <p class="student-feedback-desc">
-            " The clear explanations and practice exercises helped me grasp the basics quickly. 
-              I'm now able to understand and communicate in French with ease. "
+              <i class="fa-solid fa-quote-left"></i>
+             The clear explanations and practice exercises helped me grasp the basics quickly. 
+              I'm now able to understand and communicate in French with ease.
+              <i class="fa-solid fa-quote-right"></i>
+
             </p>
             <span class="student-name"> -Max R. , Polygot Academy student since 2023</span>
 
             <p class="student-feedback-desc">
-              " I've always wanted to learn Japanese, but I struggled to find a course that suited my learning style. 
-              Thankfully, I discovered Polyglot Academy's Japanese course, and it's been a game-changer! "
+              <i class="fa-solid fa-quote-left"></i>
+               I've always wanted to learn Japanese, but I struggled to find a course that suited my learning style. 
+              Thankfully, I discovered Polyglot Academy's Japanese course, and it's been a game-changer ! 
+              <i class="fa-solid fa-quote-right"></i>
             </p>
-            <span class="student-name"> -Mia S. , Polygot Academy student since 2023</span>
+            <span class="student-name"> - James S. , Polygot Academy student since 2023</span>
           
           </div>
           <!-- feedback wrapper  -->
@@ -469,7 +476,7 @@
         <div class="container">
           <div class="events--left">
           <h1 class="main-heading">
-            Events and Workshops 
+            Community Events
           </h1>
           <p class="subheading  events__description">
             Join our events and experience the excitement of our community gatherings, parties, surprise pop-ups, and workshops tailored for language learners worldwide.
@@ -485,17 +492,20 @@
         <!-- <a class="btn events-btn"> Learn More</a> -->
 
         <div class="events--right">
-          <div class="img-border">
-        <img src="images/download2-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy"> 
+          <div>
+        <img src="images/download2-removebg-preview.png" alt="events image" class="events__img" > 
          </div>
-         <div class="img-border">
-        <img src="images/2981d999d160ecf0080ca904cd7a197f-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">    
+        
+         <div>
+        <img src="images/2981d999d160ecf0080ca904cd7a197f-removebg-preview.png" alt="events image" class="events__img" >    
          </div>   
-         <div class="img-border">
-        <img src="images/young-adults-talking-with-each-other-different-languages_23-2148365246-removebg-preview-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">     
+       
+         <div>
+        <img src="images/young-adults-talking-with-each-other-different-languages_23-2148365246-removebg-preview-removebg-preview.png" alt="events image" class="events__img" >     
         </div>
-        <div class="img-border">  
-        <img src="images/friends-youth-happy-people-cartoon-group-outdoor-scene-urban-city-park-hanging-out-vector-illustration-graphic-design-155299825-removebg-preview.png" alt="events image" class="evnts__img" loading="lazy">      
+      
+        <div>  
+        <img src="images/friends-youth-happy-people-cartoon-group-outdoor-scene-urban-city-park-hanging-out-vector-illustration-graphic-design-155299825-removebg-preview.png" alt="events image" class="events__img" >      
         </div> 
 
        </div>
@@ -516,23 +526,28 @@
       <div class="container">
         <h1 class="main-heading faqs-heading" > Frequently asked Questions</h1>
 
-        <button class="accordion"> Is Polygot Academy free ?</button>
+        <button class="accordion">
+          Is Polygot Academy a free Platform ?
+        </button>
         <div class="panel">
           <p> Polygot Academy is free for the first month. We charge a monthly subscription fee for only 20.99 a month. </p>
         </div>
 
-        <button class="accordion"> What is the most enrolled course ?
+        <button class="accordion">
+          What is the most enrolled course throught the year ?
         </button>
         <div class="panel">
           <p> Polygot Academy's most enrolled course is Spanish, French and Hindi ! </p>
         </div>
 
-        <button class="accordion">Can I teach on Polygot Academy ?
+        <button class="accordion">
+          Can I teach on Polygot Academy ?
         </button>
         <div class="panel">
           <p> Yes, YOU CAN !!. You must go through a full background check and a teaching verification beforehand. </p>
         </div>
-        <button class="accordion"> Are the Events worldwide ?
+        <button class="accordion">
+          Are the Events worldwide ?
         </button>
         <div class="panel">
           <p> Yes,  we like to host events all over the globe. Each event is announced in a year in advance !! </p>
@@ -580,7 +595,7 @@
                   Become a Polygot !
               </a>
               <p class="footer-headline"> 
-                 Polygot Academy the #1 language learning platform!
+                #1 language learning platform!
                 </p>
 
 

@@ -20,8 +20,8 @@
 --font-weight-ExtraBold: 800;
 --font-weight-Black:900;
 /* font size */
---heading-font-size:3rem;
---subheading-font-size:32px;
+--heading-font-size: clamp(2rem, 3vw, 4.5rem);
+--subheading-font-size:22px;
 --body-font-size:clamp(16px, 3vw, 20px);
 /* transition */
 --transition: color 0.3s ease-in-out;
@@ -105,8 +105,15 @@ header{
     font-size: 1rem;
     text-decoration: none;
     font-weight: var(--font-weight-Bold);
-   color: var(--clr-white);
+    color: var(--clr-white);
+    transition: all 0.4s ease-in-out;
 
+ }
+
+ @media screen  and (max-width:355px){
+  .btn{
+    font-size: 0.8rem;
+  }
  }
 
  .btn:hover{
@@ -202,12 +209,14 @@ border-radius: 5px;
 /* border:1px black solid; */
 text-decoration: none;
 color: var(--black);
-text-transform: uppercase;
+/* text-transform: uppercase; */
 font-weight: var(--font-weight-Semibold);
+/* transition on initial state */
+transition: all 0.3s ease-in-out;
 }
 
 .navbar__btn:hover{
-background-color: var(--primary-clr);
+background-color: orange;
 border-radius: 5px;
 border:1px black solid;
 text-decoration: none;
@@ -380,7 +389,7 @@ the bars icon with the x mark (times) */
   /* ====================== HERO SECTION -----===============*/
   .hero{
     
-    /* padding-top: 40px; */
+    padding-top: 40px;
     /* height: 100vh; */
     /* border: 2px black solid; */
     /* background-image: url("../images/svgviewer-png-output\ \(4\).png"); 
@@ -551,19 +560,20 @@ the bars icon with the x mark (times) */
 .hero-img--main {
   /* margin-top: 10px; */
   /* position: absolute; */
-  max-width: 100%;
-  height: 440px;
+  /* max-width: 100%; */
+  height: 390px;
   align-items: center;
   width: 100%;
 }
 
 .hero-img--main img {
   /* width: 100%; */
- /* transform: translateY(-200px); */
+ transform: translateY(-200px);
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:667px){
   .hero-img--main {
-    height: 320px;
+    height: 300px;
+    width: 70%;
   }
 }
 
@@ -612,7 +622,7 @@ the bars icon with the x mark (times) */
   }
 }
 
-@media screen and (max-width:650px){
+@media screen and (max-width:667px){
   .dropdown__box{
     flex-direction: column;
     padding:150px 10px;
@@ -774,13 +784,10 @@ the bars icon with the x mark (times) */
     font-weight: var(--font-weight-Medium);
     /* text-transform: uppercase; */
   }
-/* 
-  .courses__info{
-    
-  } */
 
   .courses .subheading {
-    line-height: 2.0;
+    line-height: 1.7;
+    text-wrap: balance;
   }
 
 .course-cards__wrapper{
@@ -832,19 +839,14 @@ the bars icon with the x mark (times) */
 }
 
 .courses-information{
-  max-width: 50%; /* Set the maximum width as needed */
+  max-width: 60%; 
   padding:20px 0;
-  line-height: 2.5;
+  line-height: 1.7;
   margin-bottom: 15px;
-  font-size: clamp(1rem, 2vw,1.2rem);
-  /* background-color: orange; */
-  /* border-left: 2px solid blue;
-  border-top: 2px solid blue; */
-  opacity:0.9;
-  border-radius: 10px;
+  font-size: clamp(1.2rem, 2vw,1.4rem);
   padding:20px;
   font-weight: var(--font-weight-Medium);
-
+  text-wrap: balance;
 }
 
 /* ================== -------- >>>>>>> Media Queries COURSES SECTION <<<<<<--------- ===============*/
@@ -873,17 +875,17 @@ the bars icon with the x mark (times) */
     } */
 }
 
-@media (max-width: 500px) {
+@media (max-width: 667px) {
 
  .courses .subheading{
   /* max-width: 95%; */
   text-align: center;
  }
   .courses-information {
-      max-width: 70%; /* Set the maximum width as needed */
+      max-width: 80%; /* Set the maximum width as needed */
       padding:30px 0;
-      line-height: 2.5;
       margin-top: 0;
+      text-wrap: balance;
     }
 
    /* #courses__btn {
@@ -938,11 +940,13 @@ the bars icon with the x mark (times) */
  .about-us   .subheading{
  /* background-color: red; */
  margin-bottom: 50px;
+ text-wrap: balance;
+ line-height: 1.7;
   }
 
   .about-us-text{
     max-width: 80%;
-    line-height: 2.2;
+    line-height: 2;
     text-wrap: wrap;
     text-align:center ;
     margin: 20px 0;
@@ -1173,7 +1177,7 @@ the bars icon with the x mark (times) */
     /* text-wrap: wrap; */
     width: 100%;
     max-width: 57%;
-    line-height:2.0;
+    line-height:1.7;
     margin: 40px 0;
   }
 
@@ -1189,14 +1193,21 @@ the bars icon with the x mark (times) */
 
   .student-feedback-desc{
     width:100%;
-    max-width: 80%;
-    line-height: 2.5;
+    max-width: 70%;
+    line-height: 1.8;
     font-weight: var(--font-weight-Light);
-    font-size: clamp(20px, 3vw, 24px);
+    font-size: clamp(16px, 3vw, 20px);
     /* background-color: #f7c945; */
     margin-top: 50px;
     /* border: 2px solid blue; */
     border-radius: 8px;
+    text-wrap: balance;
+
+  }
+  .student-feedback-desc i{
+    font-size: 1.4rem;
+    align-items: start;
+  
   }
 
   .student-feedback-desc:nth-child(1){
@@ -1205,9 +1216,11 @@ the bars icon with the x mark (times) */
   }
 
   .student-name{
-    font-size: clamp(18px, 5vw, 22px);
-   font-weight: var(--font-weight-ExtraBold);
+    font-size: clamp(14px, 5vw, 16px);
+   font-weight: var(--font-weight-Bold);
    line-height: 2.0;
+   text-transform: capitalize;
+   color: var(--accent-clr);
   }
   
   .students .btn{
@@ -1226,32 +1239,31 @@ the bars icon with the x mark (times) */
   }
   .events .container{
     display: flex;
-    /* padding: 30px; */
-    /* padding:90px 0px; */
-    /* background-color: #f7c945; */
-    gap:3rem;
-
+    /* background-color: lightblue; */
+    gap:60px;
   }
 
   .events--left{
     display: flex;
     flex-direction: column;
     max-width: 50%;
-    /* padding: 0 5px; */
-    /* justify-content: center; */
     text-align: left;
   }
 
   .events .main-heading{
-    line-height: 1.5;
+    line-height: 1.3;
+  }
+
+  .events .subheading{
+    max-width: 70%;
   }
 
   .events__description{
     margin: 30px 0;
-    line-height: 2.5;
+    line-height: 1.8;
     font-weight: var(--font-weight-Regular);
     max-width: 80%;
-    font-size: clamp(19px, 2vw, 21px);
+    font-size: clamp(19px, 2vw, 22px);
     /* background-color: #f7c945; */
     text-align: left;
   }
@@ -1267,29 +1279,46 @@ the bars icon with the x mark (times) */
 
   }
 
- 
- 
 
 .events--right{
-   flex-basis: 50%;
+   /* flex-basis: 50%; */
    display: grid;
    grid-template-columns: repeat(2, 1fr); 
    grid-template-rows: repeat(2, 1fr); 
   /* background-color: coral; */
   align-items: center;
-  grid-gap: 30px 45px;
+  grid-gap: 30px 30px;
 }
 
 
 
 .events--right img{
    max-width: 100%;
-   border-radius: 9px;
+   border-radius: 10px;
    /* flex-shrink: 1; */
-  
+   /* border: 3px var(--accent-clr) solid; */
+   width: 100%;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
+
 }
 
-.events--right img:last-child{
+.events--right > div:nth-child(1) .events__img {
+  border: 3px var(--accent-clr) solid;
+}
+
+.events--right > div:nth-child(2) .events__img {
+  border: 3px orange solid;
+}
+.events--right > div:nth-child(3) .events__img {
+  border: 3px orange solid;
+}
+
+.events--right > div:last-child .events__img {
+  border: 3px var(--accent-clr) solid;
+}
+
+
+.events--right img{
  height:169px;
  width:250px;
 }
@@ -1298,9 +1327,7 @@ the bars icon with the x mark (times) */
 
 
 @media screen and (max-width:1087px){
-
-
-  .events--left{
+.events--left{
   padding-left: 10px;  
 }
 .events--right{
@@ -1337,7 +1364,7 @@ the bars icon with the x mark (times) */
 @media screen and (max-width:987px){
     .events--left{
       /* background-color: red; */
-      max-width: 50%;
+      max-width: 60%;
     }
     .events .btn {
       width:40%;
@@ -1383,6 +1410,10 @@ the bars icon with the x mark (times) */
       width:26%;
       /* background-color: red; */
     }
+    .events--right img{
+      height:100px;
+      width:169px;
+     }
   }
 
 
@@ -1401,7 +1432,7 @@ the bars icon with the x mark (times) */
   @media screen and (max-width:533px){
     .events .btn{
       display: inline-block;
-      width:50%;
+      width:60%;
     margin:10px;
 
   
@@ -1419,28 +1450,32 @@ the bars icon with the x mark (times) */
         text-align: center;
       }
 
+      .events--right img{
+        height:150px;
+        width:200px;
+       }
+
       /* .events--right{
         justify-content: center;
         text-align: center;
          grid-template-columns: repeat(1, 1fr); 
          column-gap: 20px;
        } */
-       .img-border{
+       /* .img-border{
         width:170px;
         height:160px;
-       }
+       } */
       }
   
 
  /*  ============================== ----- FAQS ------------------- */
  .faqs{
   /* background-color: red; */
-  padding: 50px 0;
+  padding: 20px 20px;
   align-items: center;
  }
 
 .accordion {
-  /* background-color: red; */
   color: var(--black);
   cursor: pointer;
   padding: 18px;
@@ -1448,20 +1483,19 @@ the bars icon with the x mark (times) */
   border: none;
   text-align: center;
   outline: none;
-  font-size: clamp(25px, 3vw, 32px);
-  transition: 0.4s;
+  font-size: clamp(18px, 2vw, 24px);
   background-color: white;
-  line-height: 1.8;
+  line-height: 1.5;
   display: flex;
-  gap:0.4rem;
-  text-align: center; 
-  justify-content: center;
+  /* gap:0.4rem; */
+  text-align: left; 
+  /* justify-content: center; */
   text-transform:capitalize;
   align-items: center;
   font-weight: var(--font-weight-Medium);
-  margin-top: 10px;
-  /* border-bottom: 2px solid var(--accent-clr); */
-
+  /* margin-top: 10px; */
+  border-bottom: 0.2px solid var(--black);
+  border-bottom-width: 1px;
 
 }
 
@@ -1475,12 +1509,12 @@ the bars icon with the x mark (times) */
   content: '\25BE';
   color: var(--black);
   font-weight: bold;
-  float: right;
-  margin-left: 5px;
+  margin-left: auto;
   font-weight: var(--font-weight-ExtraBold);
   font-size: 1.5rem;
   /* align-items: center; */
   transition: all 0.3s ease-in-out ;
+
 }
 
 /* when in active state it goes ot up arrow */
@@ -1490,19 +1524,24 @@ the bars icon with the x mark (times) */
 
 .panel {
   padding: 0 18px;
-  /* background-color: red; */
+  /* background-color: blue; */
+  /* crates height for panel */
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: all 0.2s ease-out;
   color: var(--black);
-  font-size: clamp(16px, 4vw, 22px);
+  /* font-size: clamp(16px, 4vw, 20px); */
   line-height: 60px;
   text-wrap: wrap;
-  text-align: center;
-  align-items: center;
+  text-align: left;
+  align-items: left;
   }
 
-
+.panel p{
+  font-size: clamp(14px, 4vw, 19px);
+  width: 80%;
+  text-wrap: balance;
+}
   .faqs-heading{
   align-items: center;
   margin: 0 25px;
@@ -1514,9 +1553,7 @@ the bars icon with the x mark (times) */
  .faqs .container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap:3rem;
+  gap:2.2rem;
   padding: 70px 0;
   text-align: center;
   /* background-color: red; */
@@ -1545,6 +1582,7 @@ the bars icon with the x mark (times) */
   padding: 10px  20px;
   text-decoration: none;
   gap: 20px 40px;
+  align-items: flex-start;
 
 }
 #col-1{
@@ -1561,7 +1599,7 @@ the bars icon with the x mark (times) */
   text-transform: capitalize;
   font-weight: var(--font-weight-Bold);
   text-wrap: balance;
-  line-height: 1.8;
+  /* line-height: 1.8; */
   color:var(--accent-clr);
   font-size: clamp(10px, 3vw, 14px);
 } 
@@ -1804,7 +1842,7 @@ the bars icon with the x mark (times) */
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr)); /* Two columns, evenly spaced */
    justify-content: center;
-   align-items: center;
+   /* align-items: center; */
    justify-content: center;
    gap:1.8rem;
    /* border: 1px green solid; */
@@ -1814,9 +1852,9 @@ the bars icon with the x mark (times) */
  
 @media screen and (max-width:500px) {
   .subscribe-form{
-    min-width:200px;
+    min-width:250px;
     flex-direction: column;
-    padding: 20px 0px;
+    padding: 20px 10px;
   }
 
   .subscribe-form button{
@@ -1824,9 +1862,12 @@ the bars icon with the x mark (times) */
    width:100%;
   }
   .subscribe-form input[type="email"]::placeholder {
-    font-size:0.8rem;
-    /* padding:5px; */
-
+    font-size:0.9rem;
+  }
+  .subscribe-form input[type="email"] {
+    width:100%;
+    text-align: center;
+  
   }
 }
 
@@ -1837,8 +1878,7 @@ the bars icon with the x mark (times) */
   }
   .footer-content{
     grid-template-columns:  minmax(1, 1fr); /* Two columns, evenly spaced */
-   /* padding:0.7rem; */
-   /* background-color: red; */
+  
 
   }
   .stats-wrapper{

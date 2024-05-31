@@ -3,8 +3,16 @@
 // console.log("testing testing!");
 
 //Scroll Reveal
-// ScrollReveal().reveal('.course-card',{ delay: 200 }); 
-// ScrollReveal().reveal('.student-feedback',{ delay: 300 }); 
+document.addEventListener("DOMContentLoaded", function() {
+  ScrollReveal().reveal('.course-cards__wrapper div', {
+      delay: 200,        // Delay before the animation starts
+      interval: 200,     // Interval between animations of each element
+      duration: 1000,    // Duration of the animation
+      reset: false       // Animation only happens once
+  });
+});
+
+
 
 // -------------------MOBILE NAVBAR SECTION----------------------------
 
