@@ -1208,9 +1208,10 @@ the bars icon with the x mark (times) */
 
   }
   .student-feedback-desc i{
-    font-size: 1.4rem;
+    font-size: 1rem;
     align-items: start;
-  
+    padding: 10px;
+    /* border: 1px solid green; */
   }
 
   .student-feedback-desc:nth-child(1){
