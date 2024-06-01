@@ -832,24 +832,26 @@ the bars icon with the x mark (times) */
 .courses__section--bottom{
   display: flex;
   /* background-color: red; */
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   align-items: center;
   /* margin-top: 50px; */
-  padding-top: 90px;;
+  padding-top: 80px;;
   /* padding: 10 40px; */
+  /* gap:4rem; */
 
 }
 
 .courses-information{
-  max-width: 60%; 
+  max-width: 50%; 
   padding:20px 0;
   line-height: 1.7;
   margin-bottom: 15px;
-  font-size: clamp(1.2rem, 2vw,1.4rem);
+  font-size: clamp(0.8rem, 2vw,1.2rem);
   padding:20px;
-  font-weight: var(--font-weight-Medium);
+  font-weight: var(--font-weight-Regular);
   text-wrap: balance;
+  align-items: center;
 }
 
 /* ================== -------- >>>>>>> Media Queries COURSES SECTION <<<<<<--------- ===============*/
@@ -1208,7 +1210,7 @@ the bars icon with the x mark (times) */
 
   }
   .student-feedback-desc i{
-    font-size: 1rem;
+    font-size: 0.7rem;
     align-items: start;
     padding: 10px;
     /* border: 1px solid green; */
@@ -1245,6 +1247,7 @@ the bars icon with the x mark (times) */
     display: flex;
     /* background-color: lightblue; */
     gap:60px;
+    align-items: center;
   }
 
   .events--left{
@@ -1364,7 +1367,7 @@ the bars icon with the x mark (times) */
 
 
 
-  @media screen and (max-width:1044px){
+  @media screen and (max-width:900px){
     .events .container{
       display: flex;
       flex-direction: column;
@@ -1934,6 +1937,32 @@ the bars icon with the x mark (times) */
   
 }
 
+@media screen and (max-width:270px) {
+  .footer-content{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)); /* Two columns, evenly spaced */
+   justify-content: center;
+   /* align-items: center; */
+   justify-content: center;
+   gap:1.8rem;
+   /* border: 1px green solid; */
+
+  }
+  .subscribe-form{
+    min-width: 100px;
+    /* flex-direction: column; */
+    padding: 20px 10px;
+  }
+  .subscribe-form button{
+    font-size: 0.4rem;
+    width:100%;
+   }
+   .subscribe-form input[type="email"]::placeholder {
+     font-size:0.4rem;
+   }
+
+}
+ 
 /* end of media querie  */
 
 
