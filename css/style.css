@@ -144,8 +144,6 @@ header{
 }
 
 .logo img {
-    /* align-items: center; */
-    /* background-color: #4544f7; */
     height:69px;
   }
 
@@ -1541,12 +1539,13 @@ the bars icon with the x mark (times) */
   }
 
 .panel p{
-  font-size: clamp(12px, 4vw, 16px);
+  font-size: clamp(12px, 4vw, 17px);
   width: 100%;
   text-wrap: balance;
   /* text-align: center; */
   /* background-color: #f9d776; */
   /* justify-content: center; */
+  max-width: 100%;
 }
   .faqs-heading{
   align-items: center;
@@ -1560,7 +1559,7 @@ the bars icon with the x mark (times) */
  .faqs .container{
   display: flex;
   flex-direction: column;
-  gap:2.2rem;
+  gap:1.2rem;
   padding: 70px 0;
   text-align: center;
   /* background-color: red; */
@@ -1958,7 +1957,7 @@ the bars icon with the x mark (times) */
     width:100%;
    }
    .subscribe-form input[type="email"]::placeholder {
-     font-size:0.4rem;
+     font-size:0.3rem;
    }
 
 }
@@ -2004,7 +2003,7 @@ the bars icon with the x mark (times) */
 /* -------------------> NAVIGATION <----------------------- */
 
 /* .go-to-bottom {
-  background-color: blue;
+  background-color: var(--accent-clr);
   width: 60px;
   height: 60px;
   align-items: center;
@@ -2013,44 +2012,23 @@ the bars icon with the x mark (times) */
   right: 2rem;
   display: inline-flex;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 9px;
   text-decoration: none;
   transition: 0.2s ease-out;
   align-items: center;
+  visibility: visible; 
+  border: 4px solid orange;
 }
 
 
 .go-to-bottom i[class^="fa"]{
-  font-size: 2.3rem;
+  font-size: 2.4rem;
   color:white;
   align-items: center;
 }
 
 .go-to-bottom:hover{
   transform:translateY(3px);
-}
-
-.back-to-top{
-  background-color: red;
-  width:60px;
-  height:60px;
-  align-items: center;
-  position:fixed;
-  bottom:2rem;
-  right:2rem;
-  display: inline-flex;
-  justify-content: center;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: 0.2s ease-out;
-  display: none;
-}
-
-.back-to-top:hover{
-  transform:translateY(-3px);
-}
-
-.back-to-top i[class^="fa"]{
-  color:white;
-  font-size: 2.3rem;
 } */
+
+

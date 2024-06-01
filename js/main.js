@@ -62,39 +62,6 @@ var acc = document.getElementsByClassName("accordion");
 
 
 
-//       // JavaScript code creates an event listener for the click event on the hamburger menu icon and toggles the "navbar-open" class on the mobile menu
-// document.addEventListener('DOMContentLoaded', function () {
-//   const hamburger = document.querySelector(".menu");
-//   const mobileMenu = document.querySelector(".mobile");
-//   const hamburgerIcon = document.querySelector(".menu i");
-//   const navLinks = document.querySelectorAll(".navbar__link");
-
-//   // Toggle mobile menu and hamburger icon
-//   hamburger.addEventListener('click', () => {
-//       mobileMenu.classList.toggle("navbar-open");
-
-//       // Toggle the hamburger icon between bars and x
-//       if (mobileMenu.classList.contains("navbar-open")) {
-//           hamburgerIcon.classList.remove("fa-bars");
-//           hamburgerIcon.classList.add("fa-times");
-//       } else {
-//           hamburgerIcon.classList.remove("fa-times");
-//           hamburgerIcon.classList.add("fa-bars");
-//       }
-//   });
-
-//   // Close mobile menu when a navigation link is clicked ninside mobile menu
-//   navLinks.forEach(link => {
-//       link.addEventListener("click", () => {
-//           mobileMenu.classList.remove("navbar-open");
-//           hamburgerIcon.classList.remove("fa-times");
-//           hamburgerIcon.classList.add("fa-bars");
-//           window.scrollTo({ top: offsetTop, behavior: "smooth" }); // Smooth scroll behavior
-//       });
-//   });
-// });
-
-
 
 // <!-- scroll to bottom floating icon -->
 //         <a href="#courses" class="go-to-bottom" onclick="scrollToBottom()" >
@@ -108,12 +75,32 @@ var acc = document.getElementsByClassName("accordion");
 //           </a>
 //         <!-- </div> -->
 
-// Back to Top Button 
+// Scroll to Top Button 
 // function scrollToBottom() {
 //     window.scrollTo({  //scrollTo method used in js 
 //         bottom: 0,
 //         behavior: 'smooth'
 //     });
+// }
+// function scrollToBottom() {
+//   window.scrollTo({
+//       top: document.body.scrollHeight,
+//       behavior: 'smooth'
+//   });
+//   document.querySelector('.go-to-bottom').style.visibility = 'hidden';  // Hide the button
+// }
+
+// window.addEventListener('scroll', function() {
+//   if (window.scrollY === 0) {
+//       document.querySelector('.go-to-bottom').style.visibility = 'visible';  // Show the button when at the top
+//   }
+// });
+
+// // Initial check to display button if needed
+// if (window.scrollY === 0) {
+//   document.querySelector('.go-to-bottom').style.visibility = 'visible';
+// } else {
+//   document.querySelector('.go-to-bottom').style.visibility = 'hidden';
 // }
 
 // var prevScrollpos = window.pageYOffset;
@@ -131,23 +118,5 @@ var acc = document.getElementsByClassName("accordion");
 // });
 
 
-// Back to Top Button 
-// function scrollToTop() {
-//     window.scrollTo({  //scrollTo method used in js 
-//         top: 0,
-//         behavior: 'smooth'
-//     });
-// }
 
-// window.addEventListener('scroll', myHeight)
-//  function myHeight(){
-//     var goTopButton= document.querySelector('.back-to-top'); //selecting the class
-//     var windowHeight = window.innerHeight; //window.innerHeight represents the height of the viewport (the visible area of the browser window).
-//     var documentHeight = document.documentElement.scrollHeight; // Total height of the document
 
-//     if(window.scrollY +  windowHeight >= documentHeight){ //When the sum is greater than or equal to the document height, it means the user has scrolled to the bottom of the page.
-//         goTopButton.style.display = "inline-flex"
-//     } else{
-//         goTopButton.style.display = "none"
-//     }
-//  }
