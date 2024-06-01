@@ -30,6 +30,8 @@
 
 html{
   scroll-behavior: smooth;
+  background-color:#f9fafb;
+
 }
 
 .main-heading{
@@ -376,6 +378,7 @@ the bars icon with the x mark (times) */
     width:100%;
     padding: 0 1.2rem;
     /* give space on edge  */
+    
 }
 
 
@@ -1339,6 +1342,7 @@ the bars icon with the x mark (times) */
   margin-top: 50px;
   
 }
+
  
 }
 
@@ -1359,23 +1363,7 @@ the bars icon with the x mark (times) */
 
 
 
-
-
-@media screen and (max-width:987px){
-    .events--left{
-      /* background-color: red; */
-      max-width: 60%;
-    }
-    .events .btn {
-      width:40%;
-      /* background-color: red; */
-    }
-
-
-  }
-
-
-  @media screen and (max-width:916px){
+  @media screen and (max-width:1044px){
     .events .container{
       display: flex;
       flex-direction: column;
@@ -1418,6 +1406,16 @@ the bars icon with the x mark (times) */
 
 
  
+/* @media screen and (max-width:987px){
+  .events--left{
+    max-width: 100%;
+  }
+  .events .btn {
+    width:40%;
+  }
+
+
+} */
 
   @media screen and (max-width:712px){
     .events .btn{
@@ -1472,7 +1470,8 @@ the bars icon with the x mark (times) */
  .faqs{
   /* background-color: red; */
   padding: 20px 20px;
-  align-items: center;
+  /* align-items: center; */
+
  }
 
 .accordion {
@@ -1481,21 +1480,21 @@ the bars icon with the x mark (times) */
   padding: 18px;
   width: 80%;
   border: none;
-  text-align: center;
   outline: none;
   font-size: clamp(18px, 2vw, 24px);
   background-color: white;
   line-height: 1.5;
   display: flex;
   /* gap:0.4rem; */
-  text-align: left; 
-  /* justify-content: center; */
+  text-align: center; 
   text-transform:capitalize;
-  align-items: center;
+  /* align-items: center; */
   font-weight: var(--font-weight-Medium);
   /* margin-top: 10px; */
   border-bottom: 0.2px solid var(--black);
   border-bottom-width: 1px;
+  background-color:#f9fafb;
+
 
 }
 
@@ -1524,29 +1523,33 @@ the bars icon with the x mark (times) */
 
 .panel {
   padding: 0 18px;
-  /* background-color: blue; */
   /* crates height for panel */
   max-height: 0;
   overflow: hidden;
   transition: all 0.2s ease-out;
   color: var(--black);
-  /* font-size: clamp(16px, 4vw, 20px); */
-  line-height: 60px;
-  text-wrap: wrap;
-  text-align: left;
-  align-items: left;
+  font-size: clamp(16px, 4vw, 20px);
+  line-height: 40px;
+  /* text-wrap: wrap; */
+  /* text-align: center; */
+  /* align-items: center; */
+  /* background-color: red; */
   }
 
 .panel p{
-  font-size: clamp(14px, 4vw, 19px);
+  font-size: clamp(12px, 4vw, 16px);
   width: 80%;
-  text-wrap: balance;
+  /* text-wrap: balance; */
+  /* text-align: center; */
+  /* background-color: #f9d776; */
+  justify-content: center;
 }
   .faqs-heading{
   align-items: center;
-  margin: 0 25px;
-  line-height: 1.5;
+  /* margin: 0 25px; */
+  line-height: 1.6;
   text-align: center;
+
  }
    
  
@@ -1557,6 +1560,7 @@ the bars icon with the x mark (times) */
   padding: 70px 0;
   text-align: center;
   /* background-color: red; */
+  align-items: center;
  }
 
 
@@ -1566,11 +1570,38 @@ the bars icon with the x mark (times) */
   }
 
 }
+/* sign up section */
+.cta-message {
+  opacity: 0.9;
+  align-items: center;
+  text-align: center;
+  /* color:#f7c945 */
+  background-color: #f9d776;
+  padding: 50px 0px;
+
+}
+@media  screen and (max-width:510px) {
+  .cta-message .btn{
+    
+  }
+}
+.cta-message .container{
+  display: flex;
+  flex-direction: column;
+  gap:2.5rem;
+  align-items: center;
+}
+.cta-text{
+  text-wrap: balance;
+}
+ .cta-message .btn{
+ }
 
 /* ============================== footer */
 .footer{
   /* background-color: #4544f7; */
   text-decoration: none;
+  margin-top: 10px;
   padding:50px;
   /* background-color: #f7c945; */
 
@@ -1592,6 +1623,7 @@ the bars icon with the x mark (times) */
 .footer__motto{
   text-transform: uppercase;
   font-size: clamp(14px, 3vw, 18px); 
+  text-wrap: balance;
 }
 
 .footer-headline{
@@ -1604,28 +1636,31 @@ the bars icon with the x mark (times) */
   font-size: clamp(10px, 3vw, 14px);
 } 
  
-#col-1 .footer-icons{
-  width: 80%;
+.footer-icons{
   display: flex;
   transition: var(--transition);
-  gap:1rem;
-  padding-bottom:1rem;
+  /* padding-bottom:1rem; */
+  /* border: 1px solid red; */
 }
 
-.footer-icons i[class^="fa"]{
-  font-size: clamp(0.6rem, 2vw, 1rem);
-}
+
 
  @media  screen and (max-width:469px) {
   .footer-icons i[class^="fa"]{
     transition: 0.3s ease-in-out;
-    color: black;
+    /* color: orange; */
+    display: flex;
+    flex-direction: column;
   }
   
  }
+
 .footer-icons i[class^="fa"]{
   transition: 0.3s ease-in-out;
-  color: black;
+  /* color: red; */
+  /* border: 1px solid green; */
+  font-size: clamp(0.5rem, 3vw, 1.1rem);
+
 }
 
 
@@ -1852,7 +1887,7 @@ the bars icon with the x mark (times) */
  
 @media screen and (max-width:500px) {
   .subscribe-form{
-    min-width:250px;
+    min-width: 200px;
     flex-direction: column;
     padding: 20px 10px;
   }
@@ -1862,7 +1897,7 @@ the bars icon with the x mark (times) */
    width:100%;
   }
   .subscribe-form input[type="email"]::placeholder {
-    font-size:0.9rem;
+    font-size:0.6rem;
   }
   .subscribe-form input[type="email"] {
     width:100%;
@@ -1924,8 +1959,8 @@ the bars icon with the x mark (times) */
 .creator{
   font-size:0.6rem;
   text-transform: uppercase;
-  margin-left: 10px;;
-  
+  margin-left: 20px;
+
 }
 
 .copyright-terms:hover{
