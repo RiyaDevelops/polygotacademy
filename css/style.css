@@ -1538,11 +1538,11 @@ the bars icon with the x mark (times) */
 
 .panel p{
   font-size: clamp(12px, 4vw, 16px);
-  width: 80%;
-  /* text-wrap: balance; */
+  width: 100%;
+  text-wrap: balance;
   /* text-align: center; */
   /* background-color: #f9d776; */
-  justify-content: center;
+  /* justify-content: center; */
 }
   .faqs-heading{
   align-items: center;
