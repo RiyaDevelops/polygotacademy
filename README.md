@@ -2,6 +2,7 @@
 # E-Learning platform Landing Page Designed and Developed by Shariya / @RiyaDevelops 
 # HTML5, CSS, JS
 # Responsive Web Development
+![image](https://github.com/RiyaDevelops/polygotacademy/assets/101432905/e620175a-c0c9-4b24-8d28-11de9478876b)
 
 # Resources 
 # css reset: https://piccalil.li/blog/a-more-modern-css-reset/
