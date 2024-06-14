@@ -76,8 +76,19 @@ header{
     background-color: white;
     border-bottom: 0.2px solid grey;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow effect */
-
 }
+
+@media screen and (max-width:260px){
+  header{
+    background-color: red;
+  }
+
+  body{
+    background-color: aqua;
+  }
+}
+
+
 .header .container {
   max-width: 1400px;
   display:flex;
@@ -227,7 +238,7 @@ display: flex;
 align-items: center;
 /* background-color: #4544f7; */
 /* justify-content: end; */
-gap:0;
+
 }
 
 .navbar-icons #globe {
@@ -500,7 +511,7 @@ the bars icon with the x mark (times) */
   }
 
   .hero__heading{
-    font-size: clamp(40px, 9vw, 70px); /* Adjust the minimum and maximum font sizes as needed */
+    font-size: clamp(35px, 9vw, 70px); /* Adjust the minimum and maximum font sizes as needed */
     font-weight: var(--font-weight-Black);
     line-height: 1.3;
     letter-spacing:2px;
@@ -1260,7 +1271,7 @@ the bars icon with the x mark (times) */
   }
 
   .events .subheading{
-    max-width: 70%;
+    max-width: 80%;
   }
 
   .events__description{
@@ -1268,7 +1279,7 @@ the bars icon with the x mark (times) */
     line-height: 1.8;
     font-weight: var(--font-weight-Regular);
     max-width: 80%;
-    font-size: clamp(19px, 2vw, 22px);
+    font-size: clamp(16px, 2vw, 20px);
     /* background-color: #f7c945; */
     text-align: left;
   }
@@ -1470,9 +1481,7 @@ the bars icon with the x mark (times) */
 
  /*  ============================== ----- FAQS ------------------- */
  .faqs{
-  /* background-color: red; */
   padding: 20px 20px;
-  /* align-items: center; */
 
  }
 
@@ -1523,8 +1532,9 @@ the bars icon with the x mark (times) */
   content: '\25B4';  /* font-size: 10px; */
 }
 
+/* container for response */
 .panel {
-  padding: 0 18px;
+  /* padding: 0 18px; */
   /* crates height for panel */
   max-height: 0;
   overflow: hidden;
@@ -1532,27 +1542,21 @@ the bars icon with the x mark (times) */
   color: var(--black);
   font-size: clamp(16px, 4vw, 20px);
   line-height: 40px;
-  /* text-wrap: wrap; */
-  /* text-align: center; */
-  /* align-items: center; */
   /* background-color: red; */
   }
 
 .panel p{
-  font-size: clamp(12px, 4vw, 17px);
+  font-size: clamp(12px, 4vw, 18px);
   width: 100%;
   text-wrap: balance;
-  /* text-align: center; */
-  /* background-color: #f9d776; */
-  /* justify-content: center; */
-  max-width: 100%;
+  text-align: left;
+  justify-content: left;
 }
+
   .faqs-heading{
-  align-items: center;
-  /* margin: 0 25px; */
   line-height: 1.6;
   text-align: center;
-
+  /* color:red; */
  }
    
  
@@ -1789,7 +1793,14 @@ the bars icon with the x mark (times) */
   text-align: center;
 }
 
+.copyright a {
+  transition: 0.2s ease-in-out;
+}
 
+.copyright a:hover {
+  color: var(--accent-clr);
+
+}
 .copyright img{
   width:30px;
   height: 30px;
