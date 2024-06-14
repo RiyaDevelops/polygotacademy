@@ -2,6 +2,7 @@
 # E-Learning platform Landing Page Designed and Developed by Shariya / @RiyaDevelops 
 # HTML5, CSS, JS
 # Responsive Web Development
+![image](https://github.com/RiyaDevelops/polygotacademy/assets/101432905/e620175a-c0c9-4b24-8d28-11de9478876b)
 
 # Resources 
 # css reset: https://piccalil.li/blog/a-more-modern-css-reset/
@@ -33,10 +34,7 @@
 # Responsive Navbar
 # https://dev.to/devggauravlet-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci
 
-# Fixes to be done 
-#  FIX HERO SECTION IMAGE. HOW DO I MAKE SURE THE IMAGE SHRINKS AS THE SIZE OF TH SCREEN SHRINKS 
-#  FIX SUBSCRIBE NEWS LETTER IN FOOTER - NOT ADAPTIG TO SCREEN SIZE
-# Photoshop logo image on photopea
+
 
 
 
